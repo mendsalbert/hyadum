@@ -13,6 +13,7 @@ module.exports = {
       },
       backgroundImage: {
         "website-logo": "url('/images/logo.png')",
+        "header-backgroundImage": "url('/images/headerBackground.jpg')",
       },
     },
   },
