@@ -1,12 +1,23 @@
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  mode: "jit",
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        playFair: "'Playfair Display', serif",
+        Abril: "'Abril Fatface', cursive",
+        Sarabun: "'Sarabun', sans-serif",
+        Montserrat: "'Montserrat', sans-serif",
+        SecularOne: "'Secular One', sans-serif",
+      },
+      backgroundImage: {
+        "website-logo": "url('/images/logo.png')",
+      },
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};
