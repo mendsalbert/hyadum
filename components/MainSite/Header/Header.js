@@ -9,12 +9,12 @@ import {
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   return (
-    <>
-      <div className="bg-white relative font-Montserrat">
+    <div className="relative h-full">
+      <div className="bg-white fixed w-full z-40 shadow-xl font-Montserrat ">
         <div className="mx-4 sm:mx-16 md:mx-20 lg:mx-32 ">
           <div className="flex justify-between items-center">
-            <div className="flex flex-row items-center py-4 space-x-1 md:space-x-2">
-              <Logo />
+            <div className="flex flex-row items-center py-6 space-x-1 md:space-x-2">
+              <Logo height="h-14" />
               <p className="font-Montserrat text-lg font-bold  text-gray-600">
                 Hyadum
               </p>
@@ -54,7 +54,7 @@ const Header = () => {
       </div>
       <div className="bg-header-backgroundImage bg-black bg-cover w-full h-screen relative">
         <div className="bg-black w-full h-screen opacity-75"></div>
-        <div className=" absolute top-0 left-0 font-Montserrat mx-4 sm:mx-16 md:mx-20 lg:mx-32 flex flex-col justify-center items-start h-screen md:text-5xl text-3xl lg:text-6xl  font-bold text-white">
+        <div className=" absolute top-0 left-0 font-Montserrat mx-4 sm:mx-16 md:mx-20 lg:mx-32 flex flex-col justify-center items-start h-screen md:text-5xl text-3xl lg:text-6xl 2xl:text-9xl  font-bold text-white">
           <p className="w-full md:w-10/12 leading-snug">
             The next generation of softwares chaning peoples life
           </p>
@@ -64,7 +64,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

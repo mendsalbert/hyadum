@@ -1,5 +1,7 @@
 import Head from "next/head";
+import About from "../components/MainSite/About/About";
 import Header from "../components/MainSite/Header/Header";
+import Services from "../components/MainSite/Services/Services";
 
 export default function Home(props) {
   return (
@@ -32,6 +34,8 @@ export default function Home(props) {
           />
         </Head>
         <Header />
+        <About />
+        <Services />
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
-const Logo = () => {
+const Logo = (props) => {
   return (
     <svg
-      className="h-12"
+      className={props.height}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 628.09 628.09"
     >
