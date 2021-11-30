@@ -12,13 +12,13 @@ const Services = () => {
   return (
     <div className="mx-4 sm:mx-16 md:mx-20 lg:mx-32 mb-20">
       <div className="flex flex-col justify-center items-center font-Montserrat">
-        <p className="text-xl text-center font-bold text-gray-700 lg:w-9/12 mb-20 mt-20 lg:text-3xl">
+        <p className="text-xl text-center font-bold text-gray-700 lg:w-9/12 mb-14 mt-7 md:mb-20 md:mt-20 lg:text-3xl">
           Products and services
         </p>
       </div>
       {/* <div className="md:flex md:flex-col lg:flex-row md:space-x-2 lg:space-x-4"> */}
-      <div className="grid grid-cols-1 md:grid md:grid-cols-2 lg:grid-cols-3 gap-14">
-        <div className="flex flex-col items-center mb-9 ">
+      <div className="grid grid-cols-1 md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-14">
+        <div className="flex flex-col items-center  ">
           <div className="bg-blue-800 rounded-tr-xl rounded-tl-xl w-full  flex flex-col items-center ">
             <AcademicCapIcon className="h-14 my-5 text-white" />
           </div>
@@ -32,7 +32,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center  mb-9">
+        <div className="flex flex-col items-center  ">
           <div className="bg-blue-800 rounded-tr-xl rounded-tl-xl w-full  flex flex-col items-center">
             <ArchiveIcon className="h-14 my-5 text-white" />
           </div>
@@ -46,7 +46,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center  mb-9">
+        <div className="flex flex-col items-center  ">
           <div className="bg-blue-800 rounded-tr-xl rounded-tl-xl  w-full flex flex-col items-center">
             <CurrencyDollarIcon className="h-14 my-5 text-white" />
           </div>
@@ -60,7 +60,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center  mb-9">
+        <div className="flex flex-col items-center  ">
           <div className="bg-blue-800 rounded-tr-xl rounded-tl-xl  w-full flex flex-col items-center">
             <CurrencyDollarIcon className="h-14 my-5 text-white" />
           </div>
@@ -74,7 +74,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center  mb-9">
+        <div className="flex flex-col items-center  ">
           <div className="bg-blue-800 rounded-tr-xl rounded-tl-xl  w-full flex flex-col items-center">
             <CurrencyDollarIcon className="h-14 my-5 text-white" />
           </div>
@@ -88,7 +88,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center  mb-9">
+        <div className="flex flex-col items-center  ">
           <div className="bg-blue-800 rounded-tr-xl rounded-tl-xl  w-full flex flex-col items-center">
             <CurrencyDollarIcon className="h-14 my-5 text-white" />
           </div>

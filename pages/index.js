@@ -1,6 +1,7 @@
 import Head from "next/head";
 import About from "../components/MainSite/About/About";
 import Header from "../components/MainSite/Header/Header";
+import News from "../components/MainSite/News/News";
 import Services from "../components/MainSite/Services/Services";
 
 export default function Home(props) {
@@ -36,6 +37,7 @@ export default function Home(props) {
         <Header />
         <About />
         <Services />
+        <News />
       </body>
     </html>
   );

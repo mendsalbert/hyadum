@@ -56,7 +56,7 @@ const Header = () => {
         <div className="bg-black w-full h-screen opacity-75"></div>
         <div className=" absolute top-0 left-0 font-Montserrat mx-4 sm:mx-16 md:mx-20 lg:mx-32 flex flex-col justify-center items-start h-screen md:text-5xl text-3xl lg:text-6xl 2xl:text-9xl  font-bold text-white">
           <p className="w-full md:w-10/12 leading-snug">
-            The next generation of softwares chaning peoples life
+            The next generation of softwares changing peoples life
           </p>
           <div className="flex flex-row space-x-2 items-center mt-4">
             <ArrowCircleRightIcon className="h-10" />
