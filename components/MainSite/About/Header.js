@@ -8,30 +8,11 @@ import {
   ArrowCircleRightIcon,
 } from "@heroicons/react/outline";
 import { useRouter } from "next/router";
-import $ from "jquery";
+
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   const router = useRouter();
-  const [whatWeBuild, setWhatWeBuild] = useState(false);
-  const [community, setCommunity] = useState(false);
-  const [contact, setContact] = useState(false);
 
-  const activeTab = (tab) => {
-    if (tab === "product") {
-      setWhatWeBuild(true);
-      setCommunity(false);
-      setContact(false);
-    } else if (tab === "community") {
-      setWhatWeBuild(false);
-      setCommunity(true);
-      setContact(false);
-    } else if (tab === "contact") {
-      setWhatWeBuild(false);
-      setContact(true);
-      setCommunity(false);
-    }
-  };
-  // console.log(router);
   return (
     <div className="relative h-full">
       <div className="bg-white fixed w-full z-40 shadow-xl font-Montserrat ">
@@ -63,74 +44,15 @@ const Header = () => {
                   About us
                 </h1>
               </Link>
-
-              <h1
-                onClick={() => {
-                  activeTab("product");
-                  $(function () {
-                    var target = $("#whatWeBuild");
-                    if (target.length) {
-                      $("html,body").animate(
-                        {
-                          scrollTop: target.offset().top,
-                        },
-                        1000
-                      );
-                      return false;
-                    }
-                  });
-                }}
-                className={`${
-                  whatWeBuild ? "border-b-4 cursor-pointer" : "cursor-pointer"
-                } `}
-              >
-                What we build
-              </h1>
-
-              <h1
-                onClick={() => {
-                  activeTab("community");
-                  $(function () {
-                    var target = $("#community");
-                    if (target.length) {
-                      $("html,body").animate(
-                        {
-                          scrollTop: target.offset().top,
-                        },
-                        1000
-                      );
-                      return false;
-                    }
-                  });
-                }}
-                className={`${
-                  community ? "border-b-4 cursor-pointer" : "cursor-pointer"
-                } `}
-              >
-                Community
-              </h1>
-              <h1
-                onClick={() => {
-                  activeTab("contact");
-                  $(function () {
-                    var target = $("#contact");
-                    if (target.length) {
-                      $("html,body").animate(
-                        {
-                          scrollTop: target.offset().top,
-                        },
-                        1000
-                      );
-                      return false;
-                    }
-                  });
-                }}
-                className={`${
-                  contact ? "border-b-4 cursor-pointer" : "cursor-pointer"
-                } `}
-              >
-                Contact
-              </h1>
+              <Link href="/">
+                <h1 className="cursor-pointer">What we build</h1>
+              </Link>
+              <Link href="/">
+                <h1 className="cursor-pointer">Community</h1>
+              </Link>
+              <Link href="/">
+                <h1 className="cursor-pointer">Contact</h1>
+              </Link>
               <SearchIcon className="h-6 cursor-pointer" />
             </div>
           </div>

@@ -1,11 +1,7 @@
 import Head from "next/head";
-import About from "../components/MainSite/About/About";
-import Community from "../components/MainSite/Community/Community";
 import Footer from "../components/MainSite/Footer/Footer";
-import Header from "../components/MainSite/Header/Header";
-import News from "../components/MainSite/News/News";
-import Services from "../components/MainSite/Services/Services";
-
+import Header from "../components/MainSite/About/Header";
+import CompanyInfo from "../components/MainSite/CompanyInfo/CompanyInfo";
 export default function Home(props) {
   return (
     <html className="">
@@ -37,10 +33,7 @@ export default function Home(props) {
           />
         </Head>
         <Header />
-        <About />
-        <Services />
-        <News />
-        <Community />
+        <CompanyInfo />
         <Footer />
       </body>
     </html>
