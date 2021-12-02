@@ -8,6 +8,7 @@ import {
   OfficeBuildingIcon,
   UserGroupIcon,
 } from "@heroicons/react/outline";
+import Link from "next/link";
 const Services = () => {
   return (
     <div id="whatWeBuild" className="mx-4 sm:mx-16 md:mx-20 lg:mx-32 mb-20">
@@ -23,7 +24,9 @@ const Services = () => {
             <AcademicCapIcon className="h-14 my-5 text-white" />
           </div>
           <div className="bg-gray-200 dark:bg-gray-600 dark:text-white w-full p-5 text-center font-Montserrat text-gray-700">
-            <p className="font-bold pb-2">School Managment App</p>
+            <Link href="/product/school_management_app">
+              <p className="font-bold pb-2">School Managment App</p>
+            </Link>
             <p>
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form by injected

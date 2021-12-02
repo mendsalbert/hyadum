@@ -31,6 +31,22 @@ const Header = () => {
       setCommunity(false);
     }
   };
+
+  const scrollFunction = (targetId) => {
+    $(function () {
+      var target = $(`#${targetId}`);
+      if (target.length) {
+        $("html,body").animate(
+          {
+            scrollTop: target.offset().top,
+          },
+          1000
+        );
+        return false;
+      }
+    });
+  };
+
   // console.log(router);
   return (
     <div className="relative h-full">
@@ -67,18 +83,7 @@ const Header = () => {
               <h1
                 onClick={() => {
                   activeTab("product");
-                  $(function () {
-                    var target = $("#whatWeBuild");
-                    if (target.length) {
-                      $("html,body").animate(
-                        {
-                          scrollTop: target.offset().top,
-                        },
-                        1000
-                      );
-                      return false;
-                    }
-                  });
+                  scrollFunction("whatWeBuild");
                 }}
                 className={`${
                   whatWeBuild ? "border-b-4 cursor-pointer" : "cursor-pointer"
@@ -90,18 +95,7 @@ const Header = () => {
               <h1
                 onClick={() => {
                   activeTab("community");
-                  $(function () {
-                    var target = $("#community");
-                    if (target.length) {
-                      $("html,body").animate(
-                        {
-                          scrollTop: target.offset().top,
-                        },
-                        1000
-                      );
-                      return false;
-                    }
-                  });
+                  scrollFunction("community");
                 }}
                 className={`${
                   community ? "border-b-4 cursor-pointer" : "cursor-pointer"
@@ -112,18 +106,7 @@ const Header = () => {
               <h1
                 onClick={() => {
                   activeTab("contact");
-                  $(function () {
-                    var target = $("#contact");
-                    if (target.length) {
-                      $("html,body").animate(
-                        {
-                          scrollTop: target.offset().top,
-                        },
-                        1000
-                      );
-                      return false;
-                    }
-                  });
+                  scrollFunction("contact");
                 }}
                 className={`${
                   contact ? "border-b-4 cursor-pointer" : "cursor-pointer"
@@ -131,7 +114,7 @@ const Header = () => {
               >
                 Contact
               </h1>
-              <SearchIcon className="h-6 cursor-pointer" />
+              {/* <SearchIcon className="h-6 cursor-pointer" /> */}
             </div>
           </div>
         </div>
@@ -148,10 +131,13 @@ const Header = () => {
             </div>
             <div className="text-2xl p-6 space-y-5 text-center pt-24 text-gray-500">
               <div className="flex flex-row justify-center items-center">
-                <SearchIcon className="h-6 cursor-pointer" />
+                {/* <SearchIcon className="h-6 cursor-pointer" /> */}
               </div>
               <Link href="/about">
                 <h1
+                  onClick={() => {
+                    setToggle(false);
+                  }}
                   className={`${
                     router.pathname === "/about"
                       ? "border-b-4"
@@ -161,9 +147,42 @@ const Header = () => {
                   About us
                 </h1>
               </Link>
-              <h1 className="cursor-pointer">What we build</h1>
-              <h1 className="cursor-pointer">Community</h1>
-              <h1 className="cursor-pointer">Contact</h1>
+              <h1
+                onClick={() => {
+                  activeTab("product");
+                  scrollFunction("whatWeBuild");
+                  setToggle(false);
+                }}
+                className={`${
+                  whatWeBuild ? "border-b-4 cursor-pointer" : "cursor-pointer"
+                } `}
+              >
+                What we build
+              </h1>
+              <h1
+                onClick={() => {
+                  activeTab("community");
+                  scrollFunction("community");
+                  setToggle(false);
+                }}
+                className={`${
+                  community ? "border-b-4 cursor-pointer" : "cursor-pointer"
+                } `}
+              >
+                Community
+              </h1>
+              <h1
+                onClick={() => {
+                  activeTab("contact");
+                  scrollFunction("contact");
+                  setToggle(false);
+                }}
+                className={`${
+                  contact ? "border-b-4 cursor-pointer" : "cursor-pointer"
+                } `}
+              >
+                Contact
+              </h1>
             </div>
           </div>
         ) : (

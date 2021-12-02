@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Logo from "../Svg/Logo";
+// import Logo from "../Svg/Logo";
+import Logo from "../../components/MainSite/Svg/Logo";
 import {
   MenuAlt3Icon,
   SearchIcon,
@@ -8,8 +9,10 @@ import {
   ArrowCircleRightIcon,
 } from "@heroicons/react/outline";
 import { useRouter } from "next/router";
+import StoryTelling from "../../components/Product/StoryTelling";
+import Prices from "../../components/Product/Prices";
 
-const Header = () => {
+const School_Management_App = () => {
   const [toggle, setToggle] = useState(false);
   const router = useRouter();
 
@@ -99,20 +102,24 @@ const Header = () => {
           ""
         )}
       </div>
-      <div className="bg-header-backgroundImage  bg-black bg-cover w-full h-screen relative">
+      <div className="bg-school-app bg-black bg-cover w-full h-screen relative">
         <div className="bg-black w-full h-screen opacity-75"></div>
         <div className=" absolute top-0 left-0 font-Montserrat mx-4 sm:mx-16 md:mx-20 lg:mx-32 flex flex-col justify-center items-start h-screen md:text-5xl text-3xl lg:text-6xl 2xl:text-9xl  font-bold text-white">
           <p className="w-full md:w-10/12 leading-snug">
-            The next generation of softwares changing peoples life
+            Transform from Manual to Digital way of managing your Educational
+            Institution
           </p>
           <div className="flex flex-row space-x-2 items-center mt-4">
             <ArrowCircleRightIcon className="h-10" />
-            <span className="text-xl ">Welcome to Hyadum</span>
+            <span className="text-xl ">Reduce Cost</span>
           </div>
         </div>
       </div>
+      {/* story telling  */}
+      <StoryTelling />
+      <Prices />
     </div>
   );
 };
 
-export default Header;
+export default School_Management_App;
