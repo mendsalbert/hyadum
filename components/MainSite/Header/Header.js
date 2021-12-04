@@ -120,7 +120,7 @@ const Header = () => {
         </div>
         {/* handburger overlay */}
         {toggle ? (
-          <div className="bg-white shadow-xl sm:hidden w-11/12 transition-all h-screen absolute z-20 top-0 right-0">
+          <div className="transition duration-700 ease-in-out bg-white shadow-xl sm:hidden w-11/12 h-screen absolute z-20 top-0 right-0">
             <div className="fixed top-0 right-0 p-4 cursor-pointer">
               <XIcon
                 onClick={() => {

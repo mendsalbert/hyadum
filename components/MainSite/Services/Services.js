@@ -1,12 +1,12 @@
 import {
   AcademicCapIcon,
   ArchiveIcon,
+  ChipIcon,
+  CubeTransparentIcon,
   CurrencyDollarIcon,
+  DotsCircleHorizontalIcon,
   HeartIcon,
-  HomeIcon,
-  NewspaperIcon,
-  OfficeBuildingIcon,
-  UserGroupIcon,
+  ShoppingBagIcon,
 } from "@heroicons/react/outline";
 import Link from "next/link";
 const Services = () => {
@@ -25,7 +25,9 @@ const Services = () => {
           </div>
           <div className="bg-gray-200 dark:bg-gray-600 dark:text-white w-full p-5 text-center font-Montserrat text-gray-700">
             <Link href="/product/school_management_app">
-              <p className="font-bold pb-2">School Managment App</p>
+              <p className="font-bold text-xl cursor-pointer pb-2">
+                School Managment App
+              </p>
             </Link>
             <p>
               There are many variations of passages of Lorem Ipsum available,
@@ -40,7 +42,23 @@ const Services = () => {
             <ArchiveIcon className="h-14 my-5 text-white" />
           </div>
           <div className="bg-gray-200 dark:bg-gray-600 dark:text-white w-full  p-5 text-center font-Montserrat text-gray-700">
-            <p className="font-bold pb-2">Web Developement</p>
+            <p className="font-bold pb-2 text-xl cursor-pointer">Voting App </p>
+            <p>
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form by injected
+              humour.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center  ">
+          <div className="bg-blue-800 rounded-tr-xl rounded-tl-xl  w-full flex flex-col items-center">
+            <HeartIcon className="h-14 my-5 text-white" />
+          </div>
+          <div className="bg-gray-200 dark:bg-gray-600 dark:text-white w-full p-5 text-center font-Montserrat text-gray-700">
+            <p className="font-bold pb-2 text-xl cursor-pointer">
+              Hospital Management App
+            </p>
             <p>
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form by injected
@@ -54,7 +72,7 @@ const Services = () => {
             <CurrencyDollarIcon className="h-14 my-5 text-white" />
           </div>
           <div className="bg-gray-200 dark:bg-gray-600 dark:text-white w-full p-5 text-center font-Montserrat text-gray-700">
-            <p className="font-bold pb-2">Web Developement</p>
+            <p className="font-bold pb-2 text-xl cursor-pointer">Hyadum Coin</p>
             <p>
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form by injected
@@ -65,10 +83,12 @@ const Services = () => {
 
         <div className="flex flex-col items-center  ">
           <div className="bg-blue-800 rounded-tr-xl rounded-tl-xl  w-full flex flex-col items-center">
-            <CurrencyDollarIcon className="h-14 my-5 text-white" />
+            <ChipIcon className="h-14 my-5 text-white" />
           </div>
           <div className="bg-gray-200 dark:bg-gray-600 dark:text-white w-full p-5 text-center font-Montserrat text-gray-700">
-            <p className="font-bold pb-2">Web Developement</p>
+            <p className="font-bold pb-2 text-xl cursor-pointer">
+              Software Developement
+            </p>
             <p>
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form by injected
@@ -79,10 +99,10 @@ const Services = () => {
 
         <div className="flex flex-col items-center  ">
           <div className="bg-blue-800 rounded-tr-xl rounded-tl-xl  w-full flex flex-col items-center">
-            <CurrencyDollarIcon className="h-14 my-5 text-white" />
+            <ShoppingBagIcon className="h-14 my-5 text-white" />
           </div>
           <div className="bg-gray-200 dark:bg-gray-600 dark:text-white w-full p-5 text-center font-Montserrat text-gray-700">
-            <p className="font-bold pb-2">Web Developement</p>
+            <p className="font-bold pb-2 text-xl cursor-pointer">TheMerchGuy</p>
             <p>
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form by injected
@@ -93,10 +113,24 @@ const Services = () => {
 
         <div className="flex flex-col items-center  ">
           <div className="bg-blue-800 rounded-tr-xl rounded-tl-xl  w-full flex flex-col items-center">
-            <CurrencyDollarIcon className="h-14 my-5 text-white" />
+            <DotsCircleHorizontalIcon className="h-14 my-5 text-white" />
           </div>
           <div className="bg-gray-200 dark:bg-gray-600 dark:text-white w-full p-5 text-center font-Montserrat text-gray-700">
-            <p className="font-bold pb-2">Web Developement</p>
+            <p className="font-bold pb-2 text-xl cursor-pointer">Splorite</p>
+            <p>
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form by injected
+              humour.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center  ">
+          <div className="bg-blue-800 rounded-tr-xl rounded-tl-xl  w-full flex flex-col items-center">
+            <CubeTransparentIcon className="h-14 my-5 text-white" />
+          </div>
+          <div className="bg-gray-200 dark:bg-gray-600 dark:text-white w-full p-5 text-center font-Montserrat text-gray-700">
+            <p className="font-bold pb-2 text-xl cursor-pointer">CryptoFile</p>
             <p>
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form by injected
