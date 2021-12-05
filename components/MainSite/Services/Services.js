@@ -7,6 +7,7 @@ import {
   DotsCircleHorizontalIcon,
   HeartIcon,
   ShoppingBagIcon,
+  ShoppingCartIcon,
 } from "@heroicons/react/outline";
 import Link from "next/link";
 const Services = () => {
@@ -66,7 +67,21 @@ const Services = () => {
             </p>
           </div>
         </div>
-
+        <div className="flex flex-col items-center  ">
+          <div className="bg-blue-800 rounded-tr-xl rounded-tl-xl  w-full flex flex-col items-center">
+            <ShoppingCartIcon className="h-14 my-5 text-white" />
+          </div>
+          <div className="bg-gray-200 dark:bg-gray-600 dark:text-white w-full p-5 text-center font-Montserrat text-gray-700">
+            <p className="font-bold pb-2 text-xl cursor-pointer">
+              Shop Management App
+            </p>
+            <p>
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form by injected
+              humour.
+            </p>
+          </div>
+        </div>
         <div className="flex flex-col items-center  ">
           <div className="bg-blue-800 rounded-tr-xl rounded-tl-xl  w-full flex flex-col items-center">
             <CurrencyDollarIcon className="h-14 my-5 text-white" />
