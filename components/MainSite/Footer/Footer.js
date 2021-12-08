@@ -22,7 +22,7 @@ const Footer = () => {
           <div>
             <div className="flex flex-row items-center mt-2 py-2 space-x-1 md:space-x-2">
               <Logo height="h-12" />
-              <p className="font-Montserrat text-lg font-bold lg:text-2xl  text-gray-600">
+              <p className="font-Montserrat text-lg font-bold lg:text-lg  text-gray-600">
                 Hyadum
               </p>
             </div>
@@ -42,14 +42,14 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h2 className="text-xl text-gray-700 font-bold pb-2">Company</h2>
+            <h2 className="text-lg text-gray-700 font-bold pb-2">Company</h2>
             <p className="text-lg text-gray-600 ">About us</p>
             <p className="text-lg text-gray-600 ">About us</p>
             <p className="text-lg text-gray-600 ">About us</p>
             <p className="text-lg text-gray-600 ">About us</p>
           </div>
           <div>
-            <h2 className="text-xl text-gray-700 font-bold pb-2">Company</h2>
+            <h2 className="text-lg text-gray-700 font-bold pb-2">Company</h2>
             <p className="text-lg text-gray-600 ">About us</p>
             <p className="text-lg text-gray-600 ">About us</p>
             <p className="text-lg text-gray-600 ">About us</p>
@@ -65,8 +65,8 @@ const Footer = () => {
         </div>
         <div className="bg-gray-300 w-full my-6 opacity-50 h-0.5"></div>
         <div className="flex flex-row justify-between">
-          <p className="text-lg text-gray-700 ">Hyadum @2021</p>
-          <p className="text-lg text-gray-700 ">English(US)</p>
+          <p className="text-sm text-gray-700 ">Hyadum @2021</p>
+          <p className="text-sm text-gray-700 ">English(US)</p>
         </div>
       </div>
     </div>

@@ -9,18 +9,18 @@ const CompanyInfo = () => {
             Hyadum
           </p>
         </div>
-        <p className="text-2xl text-center font-bold text-gray-600 lg:w-9/12 lg:text-3xl mb-12">
+        <p className="text-2xl text-center text-gray-600 lg:w-9/12 lg:text-2xl mb-12">
           Building products and services to maximise the productivity and
           enhance their lifes
         </p>
-        <p className="text-2xl text-left text-gray-600 lg:text-2xl mb-12">
+        <p className="text-xl text-left text-gray-600 lg:text-xl mb-12">
           This is a full details about the company. This is a full details about
           the company. This is a full details about the company . This is a full
           details about the company. This is a full details about the
           companyThis is a full details about the company. This is a full
           details about the company.
         </p>
-        <p className="text-2xl text-left text-gray-600  lg:text-2xl mb-12">
+        <p className="text-xl text-left text-gray-600  lg:text-xl mb-12">
           This is a full details about the company . This is a full details
           about the company. This is a full details about the company . This is
           a full details about the company.

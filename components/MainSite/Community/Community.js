@@ -16,13 +16,13 @@ const Community = () => {
   return (
     <div id="community" className="">
       <div className="mx-4 sm:mx-16 md:mx-20 lg:mx-32 mt-10 font-Montserrat">
-        <p className="text-2xl  text-left font-bold text-gray-700 lg:w-9/12 md:mb-10 mb-10 mt-10 md:mt-16  lg:text-3xl">
+        <p className="text-2xl  text-left font-bold text-gray-700 lg:w-9/12 md:mb-10 mb-10 mt-10 md:mt-16  lg:text-2xl">
           Our Community
         </p>
         <div className="">
           <div className="w-full space-y-2 ">
             <div className="bg-header-backgroundImage bg-cover w-full lg:w-full h-64 relative"></div>
-            <p className="text-2xl text-gray-700 pt-2">Hyadum</p>
+            <p className="text-xl text-gray-700 pt-2">Hyadum</p>
             <div className="bg-blue-600 w-20 h-1.5"></div>
             <p className="text-xl text-gray-600 ">
               Training the next best software engineers in the world

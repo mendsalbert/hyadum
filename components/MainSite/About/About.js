@@ -9,7 +9,7 @@ const About = () => {
             Hyadum
           </p>
         </div>
-        <p className="text-2xl text-center font-bold text-gray-600 lg:w-9/12 lg:text-3xl mb-12">
+        <p className="text-lg text-center text-gray-600 lg:w-9/12 lg:text-2xl mb-12">
           Building products and services to maximise the productivity and
           enhance their lifes
         </p>

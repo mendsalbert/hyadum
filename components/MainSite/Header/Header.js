@@ -53,7 +53,7 @@ const Header = () => {
       <div className="bg-white fixed w-full z-40 shadow-xl font-Montserrat ">
         <div className="mx-4 sm:mx-16 md:mx-20 lg:mx-32 ">
           <div className="flex justify-between items-center">
-            <div className="flex flex-row items-center py-4 md:py-6 space-x-1 md:space-x-2">
+            <div className="flex flex-row items-center py-3 md:py-4 space-x-1 md:space-x-2">
               <Logo height="h-14" />
               <p className="font-Montserrat text-lg font-bold  text-gray-600">
                 Hyadum
