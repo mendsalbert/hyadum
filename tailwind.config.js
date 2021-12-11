@@ -15,6 +15,7 @@ module.exports = {
         "website-logo": "url('/images/logo.png')",
         "header-backgroundImage": "url('/images/headerBackground.jpg')",
         "school-app": "url('/images/school.jpg')",
+        "user-icon": "url('/images/user.jpg')",
       },
     },
   },
