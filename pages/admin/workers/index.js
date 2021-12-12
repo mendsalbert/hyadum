@@ -1,12 +1,11 @@
 import Layout from "../../../components/Admin/Layout";
-import Teacher from "../../../components/Admin/Teacher/Teacher";
-
-function Index() {
+import Workers from "../../../components/Admin/Workers";
+const Index = () => {
   return (
     <Layout>
-      <Teacher />
+      <Workers />
     </Layout>
   );
-}
+};
 
 export default Index;

@@ -3,9 +3,11 @@ import SearchBar from "../SearchBar";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
-  SearchIcon,
+  UserAddIcon,
 } from "@heroicons/react/outline";
-const Home = () => {
+import Link from "next/link";
+
+const Home = (props) => {
   const [activePag, setActivePag] = useState(0);
   const products = [
     {
@@ -80,10 +82,22 @@ const Home = () => {
 
   return (
     <div className="w-7/12 p-7">
-      <SearchBar />
-      <p className="text-blue-600 text-2xl font-bold py-10">
-        Welcome back Mends Albert
-      </p>
+      <SearchBar showPrev={true} />
+
+      <div className="flex flex-row justify-between items-center">
+        <p className="text-blue-600 text-2xl font-bold py-10">
+          All Teachers (50)
+        </p>
+        <Link href="add_teacher" scroll={false}>
+          <div className="flex flex-row items-center space-x-2 ">
+            <UserAddIcon className="h-7 cursor-pointer text-gray-500" />
+            <p className="text-gray-600 cursor-pointer text-lg font-bold py-10">
+              Add Teacher
+            </p>
+          </div>
+        </Link>
+      </div>
+
       <div>
         <div className="flex flex-col">
           <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -128,9 +142,11 @@ const Home = () => {
                     {products.map((product) => (
                       <tr key={product.id}>
                         <td className="px-4 py-4 whitespace-nowrap">
-                          <div className=" mr-2 rounded-lg w-32 ">
-                            <div className="bg-user-icon w-9 h-9 rounded-full bg-cover bg-center"></div>
-                          </div>
+                          <Link href="single_teacher">
+                            <div className=" mr-2 rounded-lg w-32 ">
+                              <div className="bg-user-icon w-16 h-16 rounded-full bg-cover bg-center"></div>
+                            </div>
+                          </Link>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           {product.name}

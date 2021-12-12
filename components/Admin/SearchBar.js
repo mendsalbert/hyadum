@@ -1,5 +1,8 @@
-import { SearchIcon, UserGroupIcon } from "@heroicons/react/outline";
-const SearchBar = () => {
+import { SearchIcon, ArrowLeftIcon } from "@heroicons/react/outline";
+import { useRouter } from "next/router";
+const SearchBar = (props) => {
+  const rtr = useRouter();
+  //   console.log(props.showPrev);
   return (
     <div>
       <div>
@@ -8,9 +11,21 @@ const SearchBar = () => {
           <input
             type="text"
             placeholder="search"
-            className=" rounded-lg p-4 w-full bg-transparent text-lg font-Montserrat  focus:outline-none"
+            className=" rounded-lg p-2 w-full bg-transparent text-lg font-Montserrat  focus:outline-none"
           />
         </div>
+        {props.showPrev ? (
+          <div>
+            <ArrowLeftIcon
+              onClick={() => {
+                rtr.back();
+              }}
+              className="h-7 text-gray-500 mt-6 cursor-pointer"
+            />
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
