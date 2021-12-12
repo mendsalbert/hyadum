@@ -8,7 +8,7 @@ import SearchBar from "./SearchBar";
 
 const Home = () => {
   return (
-    <div className="w-7/12 p-7">
+    <div className="w-9/12 p-7">
       <SearchBar showPrev={false} />
       <p className="text-blue-600 text-2xl font-bold py-10">
         Welcome back Mends Albert

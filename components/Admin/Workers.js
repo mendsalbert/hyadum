@@ -1,13 +1,22 @@
-import { UserGroupIcon } from "@heroicons/react/outline";
+import { UserGroupIcon, UserAddIcon } from "@heroicons/react/outline";
 import SearchBar from "./SearchBar";
 import Link from "next/link";
 const Home = () => {
   return (
-    <div className="w-7/12 p-7">
+    <div className="w-9/12 p-7">
       <SearchBar showPrev={false} />
-      <p className="text-blue-600 text-2xl font-bold py-10">
-        Welcome back Mends Albert
-      </p>
+
+      <div className="flex flex-row justify-between items-center">
+        <p className="text-blue-600 text-2xl font-bold py-10">Workers</p>
+        <Link href="student/add_student" scroll={false}>
+          <div className="flex flex-row items-center space-x-2 ">
+            <UserAddIcon className="h-7 cursor-pointer text-gray-500" />
+            <p className="text-gray-600 cursor-pointer text-lg font-bold py-10">
+              Add Worker
+            </p>
+          </div>
+        </Link>
+      </div>
       <div className="grid grid-cols-3 gap-5">
         <div className="bg-green-100 rounded-xl p-3">
           <div className="flex justify-between items-center  text-green-900">

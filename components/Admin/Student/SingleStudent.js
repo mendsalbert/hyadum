@@ -4,16 +4,20 @@ import {
   CalendarIcon,
   CashIcon,
   FlagIcon,
+  IdentificationIcon,
   InboxIcon,
   LocationMarkerIcon,
   LogoutIcon,
   MailIcon,
+  PhoneIcon,
 } from "@heroicons/react/outline";
-const Home = () => {
+const SingleStudent = () => {
   return (
     <div className="w-9/12 p-7">
       <SearchBar showPrev={true} />
-      <p className="text-blue-600 text-2xl font-bold py-10">Teacher Details</p>
+      <p className="text-blue-600 text-2xl font-bold py-10">
+        Student Details (Mends Albert)
+      </p>
       <div className="border-2 p-4 rounded-lg">
         <div className="py-5">
           <div className="flex flex-row space-x-16">
@@ -23,15 +27,19 @@ const Home = () => {
               </div>
               <p className="text-xl font-bold text-gray-600">Mends Albert</p>
               <div className="p-2 w-full bg-blue-600 font-Montserrat text-white text-center rounded-lg cursor-pointer">
-                Send Message
+                Print Testimonial
               </div>
               <div className="text-gray-500 cursor-pointer flex items-center space-x-2">
                 <CalendarIcon className="h-6" />
-                <p className="text-sm">22 Yo</p>
+                <p className="text-sm">2 Yo</p>
               </div>
               <div className="text-gray-500 cursor-pointer flex items-center space-x-2">
                 <InboxIcon className="h-6" />
-                <p className="text-sm">Class Six(6)</p>
+                <p className="text-sm">Kindergarten 1</p>
+              </div>
+              <div className="text-gray-500 cursor-pointer flex items-center space-x-2">
+                <PhoneIcon className="h-6" />
+                <p className="text-sm">Gurdians Tel: 0249107812 1</p>
               </div>
             </div>
             <div>
@@ -44,13 +52,17 @@ const Home = () => {
                 support in all markets aned countries.
               </p>
               <div className="grid grid-cols-2 gap-5 mt-9">
-                <div className="bg-gray-200 p-2 rounded-lg text-gray-500  flex items-center space-x-2">
-                  <MailIcon className="h-6" />
-                  <p className="text-sm font-bold">mendsalbert</p>
+                <div>
+                  <IdentificationIcon className="h-6" />
+                  <p className="text-sm font-bold">Guradians Names:</p>
+                  <p className="text-sm font-bold">Father: Joseph Mensah</p>
+                  <p className="text-sm font-bold">Mother: Obidiaba Martha</p>
                 </div>
-                <div className="bg-gray-200 p-2 rounded-lg text-gray-500  flex items-center space-x-2">
-                  <LocationMarkerIcon className="h-6" />
-                  <p className="text-sm font-bold">Sunyani Nkwabeng</p>
+                <div>
+                  <PhoneIcon className="h-6" />
+                  <p className="text-sm font-bold">Guradians Contact:</p>
+                  <p className="text-sm font-bold">Father: 0249107812</p>
+                  <p className="text-sm font-bold">Mother: 0540913634</p>
                 </div>
                 <div className="bg-gray-200 p-2 rounded-lg text-gray-500  flex items-center space-x-2">
                   <CakeIcon className="h-6" />
@@ -62,11 +74,11 @@ const Home = () => {
                 </div>
                 <div className="bg-blue-600 p-2 rounded-lg text-white  flex items-center space-x-2">
                   <LogoutIcon className="h-6" />
-                  <p className="text-sm font-bold">On leave(yes)</p>
+                  <p className="text-sm font-bold">Performance - Average</p>
                 </div>
-                <div className="bg-green-600 p-2 rounded-lg text-white  flex items-center space-x-2">
+                <div className="bg-red-600 p-2 rounded-lg text-white  flex items-center space-x-2">
                   <CashIcon className="h-6" />
-                  <p className="text-sm font-bold">Salary- GHc 2,500.00</p>
+                  <p className="text-sm font-bold">Fees: (-Ghc 500.00)</p>
                 </div>
               </div>
               {/* <p className="text-2xl font-bold">Mends Albert</p> */}
@@ -78,4 +90,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default SingleStudent;
