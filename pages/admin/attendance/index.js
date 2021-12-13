@@ -3,7 +3,7 @@ import Layout from "../../../components/Admin/Layout";
 const Index = () => {
   return (
     <Layout>
-      <p>attendance</p>
+      <p>attendancfffffe</p>
     </Layout>
   );
 };
