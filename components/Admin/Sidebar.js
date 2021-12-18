@@ -1,27 +1,28 @@
+import react, { useState, useEffect } from "react";
 import {
   CalculatorIcon,
   CashIcon,
   CheckCircleIcon,
   ClockIcon,
-  CogIcon,
-  CreditCardIcon,
   GlobeIcon,
   HomeIcon,
   OfficeBuildingIcon,
-  PhoneIcon,
   UserGroupIcon,
   UsersIcon,
-  ViewGridIcon,
 } from "@heroicons/react/outline";
 import Link from "next/link";
 import { AcademicCapIcon } from "@heroicons/react/solid";
-import router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 
 const Sidebar = () => {
   const rtr = useRouter();
-
+  const [attendanceSubMenu, setAttendanceSubMenu] = useState(false);
+  useEffect(() => {
+    // console.log("this page just refreshed");
+    // setAttendanceSubMenu(attendanceSubMenu);
+  }, []);
   return (
-    <div className="w-2/12  max-h-full border-r-2 p-7">
+    <div className="w-2/12 max-h-full border-r-2 p-7">
       <div className="text-gray-600 flex items-center ">
         <AcademicCapIcon className="h-12" />
         SMS
@@ -74,18 +75,61 @@ const Sidebar = () => {
             <p className="text-lg">Students</p>
           </div>
         </Link>
-        <Link href="/admin/attendance">
+
+        <div>
           <div
-            className={`${
-              rtr.pathname === "/admin/attendance"
-                ? `text-gray-900`
-                : `text-gray-500 `
-            } cursor-pointer flex items-center space-x-6`}
+            onClick={() => {
+              setAttendanceSubMenu(!attendanceSubMenu);
+            }}
           >
-            <ClockIcon className="h-8" />
-            <p className="text-lg">Attendance</p>
+            <Link href="/admin/attendance" scroll={false}>
+              <div
+                className={`${
+                  rtr.pathname == "/admin/attendance"
+                    ? `text-gray-900`
+                    : `text-gray-500 `
+                } cursor-pointer flex items-center space-x-6 text-lg`}
+              >
+                <ClockIcon className="h-8" />
+                <p>Attendance</p>
+                {/* sub menu for attendance */}
+              </div>
+            </Link>
           </div>
-        </Link>
+          {attendanceSubMenu ? (
+            <div className="ml-16 pt-2 space-y-2">
+              <Link href="/admin/attendance/income" scroll={false}>
+                <p
+                  // onClick={() => setAttendanceSubMenu(true)}
+                  className={`text-lg text-gray-500 ${
+                    rtr.pathname === "/admin/attendance/income"
+                      ? "text-gray-900"
+                      : ""
+                  }  cursor-pointer`}
+                >
+                  Income
+                </p>
+              </Link>
+              <p className="text-lg text-gray-500 cursor-pointer">Expenses</p>
+              <p className="text-lg text-gray-500 cursor-pointer">Salaries</p>
+              <p className="text-lg text-gray-500 cursor-pointer">
+                Staff Payments
+              </p>
+              <p className="text-lg text-gray-500 cursor-pointer">
+                Transactions
+              </p>
+              <p className="text-lg text-gray-500 cursor-pointer">
+                Staff Balance
+              </p>
+              <p className="text-lg text-gray-500 cursor-pointer">
+                Print Statement
+              </p>
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
+
         <div className="text-gray-500 cursor-pointer flex items-center space-x-6">
           <CalculatorIcon className="h-8" />
           <p className="text-lg">Accounting</p>
