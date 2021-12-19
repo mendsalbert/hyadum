@@ -17,10 +17,7 @@ import { useRouter } from "next/router";
 const Sidebar = () => {
   const rtr = useRouter();
   const [attendanceSubMenu, setAttendanceSubMenu] = useState(false);
-  useEffect(() => {
-    // console.log("this page just refreshed");
-    // setAttendanceSubMenu(attendanceSubMenu);
-  }, []);
+
   return (
     <div className="w-2/12 max-h-full border-r-2 p-7">
       <div className="text-gray-600 flex items-center ">
@@ -77,39 +74,37 @@ const Sidebar = () => {
         </Link>
 
         <div>
-          <div
-            onClick={() => {
-              setAttendanceSubMenu(!attendanceSubMenu);
-            }}
-          >
-            <Link href="/admin/attendance" scroll={false}>
-              <div
-                className={`${
-                  rtr.pathname == "/admin/attendance"
-                    ? `text-gray-900`
-                    : `text-gray-500 `
-                } cursor-pointer flex items-center space-x-6 text-lg`}
-              >
-                <ClockIcon className="h-8" />
-                <p>Attendance</p>
-                {/* sub menu for attendance */}
-              </div>
-            </Link>
-          </div>
-          {attendanceSubMenu ? (
+          <Link href="/admin/attendance" scroll={false}>
+            <div
+              className={`${
+                rtr.pathname == "/admin/attendance"
+                  ? `text-gray-900`
+                  : `text-gray-500 `
+              } cursor-pointer flex items-center space-x-6 text-lg`}
+            >
+              <ClockIcon className="h-8" />
+              <p>Attendance</p>
+              {/* sub menu for attendance */}
+            </div>
+          </Link>
+
+          {rtr.pathname === "/admin/attendance/[all]" ? (
             <div className="ml-16 pt-2 space-y-2">
-              <Link href="/admin/attendance/income" scroll={false}>
-                <p
-                  // onClick={() => setAttendanceSubMenu(true)}
-                  className={`text-lg text-gray-500 ${
-                    rtr.pathname === "/admin/attendance/income"
-                      ? "text-gray-900"
-                      : ""
-                  }  cursor-pointer`}
-                >
-                  Income
-                </p>
-              </Link>
+              {/* <Link href="/admin/attendance/income" scroll={false}> */}
+              <p
+                onClick={() => {
+                  rtr.push("/admin/attendance/income");
+                  // setAttendanceSubMenu(true);
+                }}
+                className={`text-lg text-gray-500 ${
+                  rtr.pathname === "/admin/attendance/income"
+                    ? "text-gray-900"
+                    : ""
+                }  cursor-pointer`}
+              >
+                Income
+              </p>
+              {/* </Link> */}
               <p className="text-lg text-gray-500 cursor-pointer">Expenses</p>
               <p className="text-lg text-gray-500 cursor-pointer">Salaries</p>
               <p className="text-lg text-gray-500 cursor-pointer">
