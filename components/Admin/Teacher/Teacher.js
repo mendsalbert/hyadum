@@ -8,6 +8,7 @@ import {
   LocationMarkerIcon,
   LogoutIcon,
   MailIcon,
+  PrinterIcon,
 } from "@heroicons/react/outline";
 const Home = () => {
   return (
@@ -32,6 +33,10 @@ const Home = () => {
               <div className="text-gray-500 cursor-pointer flex items-center space-x-2">
                 <InboxIcon className="h-6" />
                 <p className="text-sm">Class Six(6)</p>
+              </div>
+              <div className="text-gray-500 cursor-pointer flex items-center space-x-2">
+                <CashIcon className="h-6" />
+                <p className="text-sm">Salary - Ghc 700.00</p>
               </div>
             </div>
             <div>
@@ -61,8 +66,8 @@ const Home = () => {
                   <p className="text-sm font-bold">Joined 26th October</p>
                 </div>
                 <div className="bg-blue-600 p-2 rounded-lg text-white  flex items-center space-x-2">
-                  <LogoutIcon className="h-6" />
-                  <p className="text-sm font-bold">On leave(yes)</p>
+                  <PrinterIcon className="h-6" />
+                  <p className="text-sm font-bold">Print Statement</p>
                 </div>
                 <div className="bg-green-600 p-2 rounded-lg text-white  flex items-center space-x-2">
                   <CashIcon className="h-6" />

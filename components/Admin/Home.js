@@ -1,7 +1,6 @@
 import {
   AdjustmentsIcon,
   CashIcon,
-  SearchIcon,
   UserGroupIcon,
 } from "@heroicons/react/outline";
 import SearchBar from "./SearchBar";

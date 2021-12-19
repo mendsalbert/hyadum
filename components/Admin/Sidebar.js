@@ -146,37 +146,118 @@ const Sidebar = () => {
                   Income
                 </p>
               </Link>
+              <Link href="/admin/accounting/expense" scroll={false}>
+                <p
+                  className={`text-lg text-gray-500 ${
+                    rtr.pathname === "/admin/accounting/expense"
+                      ? "text-gray-900"
+                      : ""
+                  }  cursor-pointer`}
+                >
+                  Expenses
+                </p>
+              </Link>
+              <Link href="/admin/accounting/salary" scroll={false}>
+                <p
+                  className={`text-lg text-gray-500 ${
+                    rtr.pathname === "/admin/accounting/salary"
+                      ? "text-gray-900"
+                      : ""
+                  }  cursor-pointer`}
+                >
+                  Salaries
+                </p>
+              </Link>
+              <Link href="/admin/accounting/staff_payment">
+                <p
+                  className={`text-lg text-gray-500 ${
+                    rtr.pathname === "/admin/accounting/staff_payment"
+                      ? "text-gray-900"
+                      : ""
+                  }  cursor-pointer`}
+                >
+                  Staff Payments
+                </p>
+              </Link>
+              <Link href="/admin/accounting/transaction" scroll={false}>
+                <p
+                  className={`text-lg text-gray-500 ${
+                    rtr.pathname === "/admin/accounting/transaction"
+                      ? "text-gray-900"
+                      : ""
+                  }  cursor-pointer`}
+                >
+                  Transactions
+                </p>
+              </Link>
+              {/* <p className="text-lg text-gray-500 cursor-pointer">
+                Staff Balance
+              </p> */}
+              {/* <p className="text-lg text-gray-500 cursor-pointer">
+                Print Statement
+              </p> */}
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
+        <div>
+          <Link href="/admin/grade" scroll={false}>
+            <div
+              className={`${
+                patternMatch.match(/grade/g)
+                  ? `text-gray-900`
+                  : `text-gray-500 `
+              } cursor-pointer flex items-center space-x-6 text-lg`}
+            >
+              <CheckCircleIcon className="h-8" />
+              <p className="text-lg">Grades</p>
+            </div>
+          </Link>
+          {patternMatch.match(/grade/g) ? (
+            <div className="ml-16 pt-2 space-y-2">
               <p className="text-lg text-gray-500 cursor-pointer">Expenses</p>
               <p className="text-lg text-gray-500 cursor-pointer">Salaries</p>
               <p className="text-lg text-gray-500 cursor-pointer">
                 Staff Payments
-              </p>
-              <p className="text-lg text-gray-500 cursor-pointer">
-                Transactions
-              </p>
-              <p className="text-lg text-gray-500 cursor-pointer">
-                Staff Balance
-              </p>
-              <p className="text-lg text-gray-500 cursor-pointer">
-                Print Statement
               </p>
             </div>
           ) : (
             ""
           )}
         </div>
-        <div className="text-gray-500 cursor-pointer flex items-center space-x-6">
-          <CheckCircleIcon className="h-8" />
-          <p className="text-lg">Grades</p>
+        <div>
+          <Link href="/admin/fees" scroll={false}>
+            <div
+              className={`${
+                patternMatch.match(/fees/g) ? `text-gray-900` : `text-gray-500 `
+              } cursor-pointer flex items-center space-x-6 text-lg`}
+            >
+              <CashIcon className="h-8" />
+              <p className="text-lg">Student Fees</p>
+            </div>
+          </Link>
+          {patternMatch.match(/fees/g) ? (
+            <div className="ml-16 pt-2 space-y-2">
+              <p className="text-lg text-gray-500 cursor-pointer">Expenses</p>
+              <p className="text-lg text-gray-500 cursor-pointer">Salaries</p>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
-        <div className="text-gray-500 cursor-pointer flex items-center space-x-6">
-          <CashIcon className="h-8" />
-          <p className="text-lg">Student Fees</p>
-        </div>
-        <div className="text-gray-500 cursor-pointer flex items-center space-x-6">
-          <GlobeIcon className="h-8" />
-          <p className="text-lg">Resources</p>
-        </div>
+        <Link href="/admin/resources" scroll={false}>
+          <div
+            className={`${
+              patternMatch.match(/resources/g)
+                ? `text-gray-900`
+                : `text-gray-500 `
+            } cursor-pointer flex items-center space-x-6 text-lg`}
+          >
+            <GlobeIcon className="h-8" />
+            <p className="text-lg">Resources</p>
+          </div>
+        </Link>
       </div>
     </div>
   );

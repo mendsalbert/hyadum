@@ -1,9 +1,9 @@
 import Layout from "../../../components/Admin/Layout";
-import IncomePage from "../../../components/Admin/Accounting/Income";
+import ExpensesPage from "../../../components/Admin/Accounting/Expenses";
 function Income() {
   return (
     <Layout>
-      <IncomePage />
+      <ExpensesPage />
     </Layout>
   );
 }
