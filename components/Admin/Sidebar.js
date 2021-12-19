@@ -1,4 +1,5 @@
 import react, { useState, useEffect } from "react";
+import urlRegex from "url-regex";
 import {
   CalculatorIcon,
   CashIcon,
@@ -16,7 +17,7 @@ import { useRouter } from "next/router";
 
 const Sidebar = () => {
   const rtr = useRouter();
-  const [attendanceSubMenu, setAttendanceSubMenu] = useState(false);
+  let patternMatch = rtr.pathname;
 
   return (
     <div className="w-2/12 max-h-full border-r-2 p-7">
@@ -77,34 +78,29 @@ const Sidebar = () => {
           <Link href="/admin/attendance" scroll={false}>
             <div
               className={`${
-                rtr.pathname == "/admin/attendance"
+                patternMatch.match(/attendance/g)
                   ? `text-gray-900`
                   : `text-gray-500 `
               } cursor-pointer flex items-center space-x-6 text-lg`}
             >
               <ClockIcon className="h-8" />
               <p>Attendance</p>
-              {/* sub menu for attendance */}
             </div>
           </Link>
 
-          {rtr.pathname === "/admin/attendance/[all]" ? (
+          {patternMatch.match(/attendance/g) ? (
             <div className="ml-16 pt-2 space-y-2">
-              {/* <Link href="/admin/attendance/income" scroll={false}> */}
-              <p
-                onClick={() => {
-                  rtr.push("/admin/attendance/income");
-                  // setAttendanceSubMenu(true);
-                }}
-                className={`text-lg text-gray-500 ${
-                  rtr.pathname === "/admin/attendance/income"
-                    ? "text-gray-900"
-                    : ""
-                }  cursor-pointer`}
-              >
-                Income
-              </p>
-              {/* </Link> */}
+              <Link href="/admin/attendance/income" scroll={false}>
+                <p
+                  className={`text-lg text-gray-500 ${
+                    rtr.pathname === "/admin/attendance/income"
+                      ? "text-gray-900"
+                      : ""
+                  }  cursor-pointer`}
+                >
+                  Income
+                </p>
+              </Link>
               <p className="text-lg text-gray-500 cursor-pointer">Expenses</p>
               <p className="text-lg text-gray-500 cursor-pointer">Salaries</p>
               <p className="text-lg text-gray-500 cursor-pointer">
@@ -124,10 +120,50 @@ const Sidebar = () => {
             ""
           )}
         </div>
-
-        <div className="text-gray-500 cursor-pointer flex items-center space-x-6">
-          <CalculatorIcon className="h-8" />
-          <p className="text-lg">Accounting</p>
+        <div>
+          <Link href="/admin/accounting" scroll={false}>
+            <div
+              className={`${
+                patternMatch.match(/accounting/g)
+                  ? `text-gray-900`
+                  : `text-gray-500 `
+              } cursor-pointer flex items-center space-x-6 text-lg`}
+            >
+              <CalculatorIcon className="h-8" />
+              <p className="text-lg">Accounting</p>
+            </div>
+          </Link>
+          {patternMatch.match(/accounting/g) ? (
+            <div className="ml-16 pt-2 space-y-2">
+              <Link href="/admin/accounting/income" scroll={false}>
+                <p
+                  className={`text-lg text-gray-500 ${
+                    rtr.pathname === "/admin/accounting/income"
+                      ? "text-gray-900"
+                      : ""
+                  }  cursor-pointer`}
+                >
+                  Income
+                </p>
+              </Link>
+              <p className="text-lg text-gray-500 cursor-pointer">Expenses</p>
+              <p className="text-lg text-gray-500 cursor-pointer">Salaries</p>
+              <p className="text-lg text-gray-500 cursor-pointer">
+                Staff Payments
+              </p>
+              <p className="text-lg text-gray-500 cursor-pointer">
+                Transactions
+              </p>
+              <p className="text-lg text-gray-500 cursor-pointer">
+                Staff Balance
+              </p>
+              <p className="text-lg text-gray-500 cursor-pointer">
+                Print Statement
+              </p>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
         <div className="text-gray-500 cursor-pointer flex items-center space-x-6">
           <CheckCircleIcon className="h-8" />
