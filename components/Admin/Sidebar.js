@@ -214,17 +214,6 @@ const Sidebar = () => {
               <p className="text-lg">Grades</p>
             </div>
           </Link>
-          {patternMatch.match(/grade/g) ? (
-            <div className="ml-16 pt-2 space-y-2">
-              <p className="text-lg text-gray-500 cursor-pointer">Expenses</p>
-              <p className="text-lg text-gray-500 cursor-pointer">Salaries</p>
-              <p className="text-lg text-gray-500 cursor-pointer">
-                Staff Payments
-              </p>
-            </div>
-          ) : (
-            ""
-          )}
         </div>
         <div>
           <Link href="/admin/fees" scroll={false}>
@@ -239,8 +228,17 @@ const Sidebar = () => {
           </Link>
           {patternMatch.match(/fees/g) ? (
             <div className="ml-16 pt-2 space-y-2">
-              <p className="text-lg text-gray-500 cursor-pointer">Expenses</p>
-              <p className="text-lg text-gray-500 cursor-pointer">Salaries</p>
+              <Link href="/admin/fees/payment" scroll={false}>
+                <p
+                  className={`${
+                    patternMatch.match(/payment/g)
+                      ? `text-gray-900`
+                      : `text-gray-500 `
+                  } cursor-pointer flex items-center space-x-6 text-lg`}
+                >
+                  Payment
+                </p>
+              </Link>
             </div>
           ) : (
             ""
