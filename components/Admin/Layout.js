@@ -5,7 +5,7 @@ const Layout = (props) => {
   return (
     <>
       <Header />
-      <div className="font-Montserrat flex flex-row w-full  ">
+      <div className="font-Montserrat flex flex-row w-full">
         {/* side */}
         <Sidebar />
         {/* main */}

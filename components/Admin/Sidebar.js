@@ -8,6 +8,7 @@ import {
   GlobeIcon,
   HomeIcon,
   OfficeBuildingIcon,
+  UserAddIcon,
   UserGroupIcon,
   UsersIcon,
 } from "@heroicons/react/outline";
@@ -49,6 +50,18 @@ const Sidebar = () => {
             <p className="text-lg">School</p>
           </div>
         </Link>
+        <Link href="/admin/admission" scroll={false}>
+          <div
+            className={`${
+              rtr.pathname === "/admin/admission"
+                ? `text-gray-900`
+                : `text-gray-500 `
+            } cursor-pointer flex items-center space-x-6`}
+          >
+            <UserAddIcon className="h-8" />
+            <p className="text-lg">Admission</p>
+          </div>
+        </Link>
         <Link href="/admin/workers/" scroll={false}>
           <div
             className={`${
@@ -74,7 +87,7 @@ const Sidebar = () => {
           </div>
         </Link>
 
-        <div>
+        {/* <div>
           <Link href="/admin/attendance" scroll={false}>
             <div
               className={`${
@@ -119,7 +132,7 @@ const Sidebar = () => {
           ) : (
             ""
           )}
-        </div>
+        </div> */}
         <div>
           <Link href="/admin/accounting" scroll={false}>
             <div
@@ -190,12 +203,6 @@ const Sidebar = () => {
                   Transactions
                 </p>
               </Link>
-              {/* <p className="text-lg text-gray-500 cursor-pointer">
-                Staff Balance
-              </p> */}
-              {/* <p className="text-lg text-gray-500 cursor-pointer">
-                Print Statement
-              </p> */}
             </div>
           ) : (
             ""

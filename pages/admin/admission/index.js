@@ -1,10 +1,10 @@
+import Admission from "../../../components/Admin/Admission/Admission";
 import Layout from "../../../components/Admin/Layout";
-import Resource from "../../../components/Admin/Resources/Resource";
 
 const Index = () => {
   return (
     <Layout>
-      <Resource />
+      <Admission />
     </Layout>
   );
 };

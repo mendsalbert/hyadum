@@ -5,7 +5,7 @@ const Grades = () => {
       <SearchBar showPrev={true} />
       <p className="text-blue-600 text-2xl font-bold py-2">Grades</p>
       <div className="w-full ">
-        <div className="bg-gray-50 rounded-lg p-4">
+        <div className="bg-gray-100 rounded-lg p-4 shadow-md">
           <div className="flex items-center space-x-6">
             <div>
               <select className="rounded-lg p-2 w-full  font-Montserrat  focus:outline-none">
