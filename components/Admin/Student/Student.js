@@ -12,7 +12,7 @@ function Student() {
       <div className="flex flex-row justify-between items-center">
         <p className="text-blue-600 text-2xl font-bold py-10">List of Levels</p>
         <div className="flex flex-row items-center space-x-3 ">
-          <Link href="student/add_student" scroll={false}>
+          <Link href="admission/" scroll={false}>
             <div className="flex flex-row items-center space-x-2 ">
               <UserAddIcon className="h-7 cursor-pointer text-gray-500" />
               <p className="text-gray-600 cursor-pointer text-lg font-bold py-10">

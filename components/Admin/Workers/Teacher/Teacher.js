@@ -1,4 +1,4 @@
-import SearchBar from "../SearchBar";
+import SearchBar from "../../SearchBar";
 import {
   CakeIcon,
   CalendarIcon,
@@ -28,7 +28,7 @@ const Home = () => {
               </div>
               <div className="text-gray-500 cursor-pointer flex items-center space-x-2">
                 <CalendarIcon className="h-6" />
-                <p className="text-sm">22 Yo</p>
+                <p className="text-sm">2 Yo</p>
               </div>
               <div className="text-gray-500 cursor-pointer flex items-center space-x-2">
                 <InboxIcon className="h-6" />
@@ -59,7 +59,7 @@ const Home = () => {
                 </div>
                 <div className="bg-gray-200 p-2 rounded-lg text-gray-500  flex items-center space-x-2">
                   <CakeIcon className="h-6" />
-                  <p className="text-sm font-bold">21st May, 1999</p>
+                  <p className="text-sm font-bold">21st May, 2021</p>
                 </div>
                 <div className="bg-gray-200 p-2 rounded-lg text-gray-500  flex items-center space-x-2">
                   <FlagIcon className="h-6" />

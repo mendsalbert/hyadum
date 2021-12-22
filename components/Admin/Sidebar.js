@@ -170,7 +170,7 @@ const Sidebar = () => {
                   Expenses
                 </p>
               </Link>
-              <Link href="/admin/accounting/salary" scroll={false}>
+              <Link href="/admin/workers/" scroll={false}>
                 <p
                   className={`text-lg text-gray-500 ${
                     rtr.pathname === "/admin/accounting/salary"
@@ -181,7 +181,7 @@ const Sidebar = () => {
                   Salaries
                 </p>
               </Link>
-              <Link href="/admin/accounting/staff_payment">
+              {/* <Link href="/admin/accounting/staff_payment">
                 <p
                   className={`text-lg text-gray-500 ${
                     rtr.pathname === "/admin/accounting/staff_payment"
@@ -191,7 +191,7 @@ const Sidebar = () => {
                 >
                   Staff Payments
                 </p>
-              </Link>
+              </Link> */}
               <Link href="/admin/accounting/transaction" scroll={false}>
                 <p
                   className={`text-lg text-gray-500 ${
@@ -223,7 +223,7 @@ const Sidebar = () => {
           </Link>
         </div>
         <div>
-          <Link href="/admin/fees" scroll={false}>
+          <Link href="/admin/student" scroll={false}>
             <div
               className={`${
                 patternMatch.match(/fees/g) ? `text-gray-900` : `text-gray-500 `
@@ -233,7 +233,7 @@ const Sidebar = () => {
               <p className="text-lg">Student Fees</p>
             </div>
           </Link>
-          {patternMatch.match(/fees/g) ? (
+          {/* {patternMatch.match(/fees/g) ? (
             <div className="ml-16 pt-2 space-y-2">
               <Link href="/admin/fees/payment" scroll={false}>
                 <p
@@ -249,7 +249,7 @@ const Sidebar = () => {
             </div>
           ) : (
             ""
-          )}
+          )} */}
         </div>
         <Link href="/admin/resources" scroll={false}>
           <div

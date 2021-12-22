@@ -1,10 +1,9 @@
 import Layout from "../../../../components/Admin/Layout";
-import AddTeacher from "../../../../components/Admin/Workers/Teacher/AddTeacher";
-
+import AllAdministrators from "../../../../components/Admin/Workers/Administrator/AllAdministrators";
 function Index() {
   return (
     <Layout>
-      <AddTeacher />
+      <AllAdministrators />
     </Layout>
   );
 }

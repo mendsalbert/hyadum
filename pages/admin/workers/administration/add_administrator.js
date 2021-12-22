@@ -1,10 +1,10 @@
 import Layout from "../../../../components/Admin/Layout";
-import AddTeacher from "../../../../components/Admin/Workers/Teacher/AddTeacher";
+import AddAdministrator from "../../../../components/Admin/Workers/Administrator/AddAdministrator";
 
 function Index() {
   return (
     <Layout>
-      <AddTeacher />
+      <AddAdministrator />
     </Layout>
   );
 }

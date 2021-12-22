@@ -1,5 +1,5 @@
-import SearchBar from "../SearchBar";
-const AddTeacher = () => {
+import SearchBar from "../../SearchBar";
+const AddNonTeaching = () => {
   return (
     <div className="w-9/12 p-7">
       <SearchBar showPrev={true} />
@@ -56,4 +56,4 @@ const AddTeacher = () => {
   );
 };
 
-export default AddTeacher;
+export default AddNonTeaching;

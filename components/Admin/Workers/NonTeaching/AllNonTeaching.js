@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from "react";
-import SearchBar from "../SearchBar";
+import SearchBar from "../../SearchBar";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
   UserAddIcon,
 } from "@heroicons/react/outline";
 import Link from "next/link";
-import Modal from "../Utils/Modal/Modal";
 
 const Home = (props) => {
   const [activePag, setActivePag] = useState(0);
-  const [modal, setModal] = useState(false);
   const products = [
     {
       id: "1",
@@ -49,13 +47,6 @@ const Home = (props) => {
     },
   ];
 
-  const setModalController = () => {
-    setModal(true);
-  };
-
-  const canceleModalController = () => {
-    setModal(false);
-  };
   const resultsPerPage = 10;
   const divides = Math.round(5 / resultsPerPage);
 
@@ -95,18 +86,18 @@ const Home = (props) => {
 
       <div className="flex flex-row justify-between items-center">
         <p className="text-blue-600 text-2xl font-bold py-10">
-          All Students in Kindergarten 1 (50)
+          All Non Teaching Staff (7)
         </p>
-        <Link href="../admission/" scroll={false}>
+        <Link href="addNonTeaching" scroll={false}>
           <div className="flex flex-row items-center space-x-2 ">
             <UserAddIcon className="h-7 cursor-pointer text-gray-500" />
             <p className="text-gray-600 cursor-pointer text-lg font-bold py-10">
-              Add Student
+              Add Staff
             </p>
           </div>
         </Link>
       </div>
-      {modal ? <Modal canclePayment={canceleModalController} /> : ""}
+
       <div>
         <div className="flex flex-col">
           <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -151,7 +142,7 @@ const Home = (props) => {
                     {products.map((product) => (
                       <tr key={product.id}>
                         <td className="px-4 py-4 whitespace-nowrap">
-                          <Link href="single_student">
+                          <Link href="singleNonTeaching">
                             <div className=" mr-2 rounded-lg w-32 ">
                               <div className="bg-user-icon w-16 h-16 rounded-full bg-cover bg-center"></div>
                             </div>
@@ -165,11 +156,8 @@ const Home = (props) => {
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           {product.salary}
-                          <div
-                            onClick={() => setModalController()}
-                            className="bg-blue-600 px-4 py-2 text-white text-center rounded-md cursor-pointer"
-                          >
-                            Pay Fees
+                          <div className="bg-blue-600 px-4 py-2 text-white text-center rounded-md cursor-pointer">
+                            Pay Salary
                           </div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">

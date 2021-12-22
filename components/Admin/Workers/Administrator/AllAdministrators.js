@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
-import SearchBar from "../SearchBar";
+import SearchBar from "../../SearchBar";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
   UserAddIcon,
 } from "@heroicons/react/outline";
 import Link from "next/link";
+import Modal from "../../Utils/Modal/Modal";
 
 const Home = (props) => {
   const [activePag, setActivePag] = useState(0);
+  const [modal, setModal] = useState(false);
   const products = [
     {
       id: "1",
@@ -47,6 +49,14 @@ const Home = (props) => {
     },
   ];
 
+  const setModalController = () => {
+    setModal(true);
+  };
+
+  const canceleModalController = () => {
+    setModal(false);
+  };
+
   const resultsPerPage = 10;
   const divides = Math.round(5 / resultsPerPage);
 
@@ -81,23 +91,23 @@ const Home = (props) => {
   };
 
   return (
-    <div className="w-9/12 p-7">
+    <div className="w-9/12 p-7 ">
       <SearchBar showPrev={true} />
 
       <div className="flex flex-row justify-between items-center">
         <p className="text-blue-600 text-2xl font-bold py-10">
-          All Teachers (50)
+          All Administrators (5)
         </p>
-        <Link href="add_teacher" scroll={false}>
+        <Link href="add_administrator" scroll={false}>
           <div className="flex flex-row items-center space-x-2 ">
             <UserAddIcon className="h-7 cursor-pointer text-gray-500" />
             <p className="text-gray-600 cursor-pointer text-lg font-bold py-10">
-              Add Teacher
+              Add Administrator
             </p>
           </div>
         </Link>
       </div>
-
+      {modal ? <Modal canclePayment={canceleModalController} /> : ""}
       <div>
         <div className="flex flex-col">
           <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -142,7 +152,7 @@ const Home = (props) => {
                     {products.map((product) => (
                       <tr key={product.id}>
                         <td className="px-4 py-4 whitespace-nowrap">
-                          <Link href="single_teacher">
+                          <Link href="single_administrator">
                             <div className=" mr-2 rounded-lg w-32 ">
                               <div className="bg-user-icon w-16 h-16 rounded-full bg-cover bg-center"></div>
                             </div>
@@ -156,6 +166,12 @@ const Home = (props) => {
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           {product.salary}
+                          <div
+                            onClick={() => setModalController()}
+                            className="bg-blue-600 px-4 py-2 text-white text-center rounded-md cursor-pointer"
+                          >
+                            Pay Salary
+                          </div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           {product.age}
@@ -202,36 +218,6 @@ const Home = (props) => {
           </div>
         </div>
       </div>
-      {/* <div className="flex justify-between items-center space-x-8">
-        <div className="bg-green-100 rounded-xl p-3">
-          <div className="flex justify-between items-center  text-green-900">
-            <UserGroupIcon className="h-10" />
-          </div>
-          <p className=" text-green-900 text-2xl font-bold">10K</p>
-          <p className="text-green-900 ">Number of Students</p>
-        </div>
-        <div className="bg-purple-100 rounded-xl p-3">
-          <div className="flex justify-between items-center  text-purple-900">
-            <UserGroupIcon className="h-10" />
-          </div>
-          <p className=" text-purple-900 text-2xl font-bold">12.1K</p>
-          <p className="text-purple-900 ">Number of Teachers</p>
-        </div>
-        <div className="bg-yellow-100 rounded-xl p-3">
-          <div className="flex justify-between items-center  text-yellow-900">
-            <UserGroupIcon className="h-10" />
-          </div>
-          <p className=" text-yellow-900 text-2xl font-bold">30K</p>
-          <p className="text-yellow-900 ">Number of Staff</p>
-        </div>
-        <div className="bg-blue-100 rounded-xl p-3">
-          <div className="flex justify-between items-center  text-blue-900">
-            <UserGroupIcon className="h-10" />
-          </div>
-          <p className=" text-blue-900 text-2xl font-bold">40K</p>
-          <p className="text-blue-900 ">Number of Buses</p>
-        </div>
-      </div> */}
     </div>
   );
 };

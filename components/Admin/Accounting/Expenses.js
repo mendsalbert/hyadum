@@ -3,53 +3,41 @@ const Expenses = () => {
   return (
     <div className="w-9/12 p-7">
       <SearchBar showPrev={true} />
-      <p className="text-blue-600 text-2xl font-bold py-2">Add Expenses</p>
+      <p className="text-blue-600 text-2xl font-bold py-2">Expenses</p>
       <div className="w-full ">
-        <div>
-          <div>
-            <div className="border-gray-300 border-2 my-5 w-full flex flex-row items-center rounded-xl ">
+        <div className="bg-gray-100 rounded-lg p-4 shadow-md">
+          <div className="grid grid-cols-3 gap-3  ">
+            <div>
               <input
-                type="text"
-                placeholder="Name"
-                className=" rounded-lg p-2 w-full bg-transparent font-Montserrat  focus:outline-none"
+                type="number"
+                className="p-2 rounded-md"
+                placeholder="amount"
               />
             </div>
-            <span>Teacher image:</span>
-            <div className="border-gray-300 border-2 mb-5 mt-1 w-full flex flex-row items-center rounded-xl ">
+            <div>
               <input
-                accept="image/*"
-                required
+                type="date"
+                className="p-2 rounded-md"
+                placeholder="Date"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                className="p-2 rounded-md"
+                placeholder="Comment"
+              />
+            </div>
+            <div>
+              <input
                 type="file"
-                placeholder="Enter blog title"
-                className=" rounded-lg p-2 w-full bg-transparent font-Montserrat  focus:outline-none"
+                className="p-2 rounded-md"
+                // placeholder="Comments"
               />
             </div>
-
-            <div className="border-gray-300 border-2 mb-5 mt-3 w-full flex flex-row items-center rounded-xl ">
-              <input
-                type="text"
-                placeholder="Salary"
-                className=" rounded-lg p-2 w-full bg-transparent font-Montserrat  focus:outline-none"
-              />
-            </div>
-            <div className="border-gray-300 border-2 mb-5 mt-3 w-full flex flex-row items-center rounded-xl ">
-              <input
-                type="text"
-                placeholder="Class"
-                className=" rounded-lg p-2 w-full bg-transparent font-Montserrat  focus:outline-none"
-              />
-            </div>
-            <div className="border-gray-300 border-2 mb-5 mt-3 w-full flex flex-row items-center rounded-xl ">
-              <textarea
-                rows={4}
-                placeholder="About Teacher"
-                className=" rounded-lg p-2 w-full bg-transparent font-Montserrat  focus:outline-none"
-              ></textarea>
-            </div>
-
-            <div className="bg-gray-900 my-5 w-full flex flex-row items-center rounded-xl justify-center cursor-pointer ">
-              <p className="text-center p-2 text-white">Save</p>
-            </div>
+          </div>
+          <div className="bg-blue-600 mt-3 p-2 text-center rounded-lg text-white cursor-pointer">
+            SAVE
           </div>
         </div>
       </div>

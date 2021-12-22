@@ -13,6 +13,7 @@ const SearchBar = (props) => {
             placeholder="search"
             className=" rounded-lg p-2 w-full bg-transparent text-lg font-Montserrat  focus:outline-none"
           />
+          <span>Lesson note</span>
         </div>
         {props.showPrev ? (
           <div>
