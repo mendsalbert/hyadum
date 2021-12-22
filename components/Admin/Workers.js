@@ -12,7 +12,7 @@ const Home = () => {
           <div className="flex flex-row items-center space-x-2 ">
             <UserAddIcon className="h-7 cursor-pointer text-gray-500" />
             <p className="text-gray-600 cursor-pointer text-lg font-bold py-10">
-              Add Worker
+              Add Staff (User)
             </p>
           </div>
         </Link>

@@ -45,11 +45,10 @@ const SingleStudent = () => {
             <div>
               <p className="text-lg mb-1 font-bold text-gray-600">About</p>
               <p className="text-gray-500">
-                Before being named CEO in August 2011, Tim was Apple's chief
-                operating officer and was responsible for all of the company's
-                worldwide sales and operations, including end-to-end management
-                of Apple's supply chain, sales activities, and service and
-                support in all markets aned countries.
+                Mends Albert is a student of Divine Montesorre School. In class
+                Six(6). He comes from Sampa in the Jarman North District Bono
+                Region. Daniel Adu Sarkodie is the name of his class teacher. Mr
+                an Mrs.Mends are his parents.
               </p>
               <div className="grid grid-cols-2 gap-5 mt-9">
                 <div>

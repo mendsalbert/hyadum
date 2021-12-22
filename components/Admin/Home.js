@@ -10,8 +10,11 @@ const Home = () => {
   return (
     <div className="w-9/12 p-7">
       <SearchBar showPrev={false} />
-      <p className="text-blue-600 text-2xl font-bold py-10">
+      <p className="text-blue-600 text-2xl font-bold pt-10 pb-2">
         Welcome back Mends Albert
+      </p>
+      <p className="text-lg text-gray-600 pb-4">
+        Last login : 4:00PM 3rd December, 2021
       </p>
       <div className="grid grid-cols-3 gap-5">
         <div className="bg-gray-100 rounded-xl p-3">
