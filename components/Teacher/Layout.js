@@ -1,13 +1,12 @@
-import Header from "../Admin/Header";
-import Sidebar from "../Admin/Sidebar";
-import SideRight from "../Admin/SideRight";
-
+import Header from "../Teacher/Header";
+import Sidebar from "../Teacher/Sidebar";
+import SideRight from "../Teacher/SideRight";
 const Layout = (props) => {
   return (
     <>
       <div className="relative">
         <Header />
-        <div className="font-Montserrat flex flex-row w-full">
+        <div className="font-Montserrat md:flex md:flex-col lg:flex lg:flex-row lg:w-full">
           {/* side */}
           <Sidebar />
           {/* main */}
