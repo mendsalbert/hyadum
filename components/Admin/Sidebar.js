@@ -4,7 +4,7 @@ import {
   CalculatorIcon,
   CashIcon,
   CheckCircleIcon,
-  ClockIcon,
+  BookOpenIcon,
   GlobeIcon,
   HomeIcon,
   OfficeBuildingIcon,
@@ -72,6 +72,18 @@ const Sidebar = () => {
           >
             <UserGroupIcon className="h-8" />
             <p className="text-lg">Workers</p>
+          </div>
+        </Link>
+        <Link href="/admin/course" scroll={false}>
+          <div
+            className={`${
+              rtr.pathname === "/admin/course"
+                ? `text-gray-900`
+                : `text-gray-500 `
+            } cursor-pointer flex items-center space-x-6`}
+          >
+            <BookOpenIcon className="h-8" />
+            <p className="text-lg">Courses</p>
           </div>
         </Link>
         <Link href="/admin/student" scroll={false}>
