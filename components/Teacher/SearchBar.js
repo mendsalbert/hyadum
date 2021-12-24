@@ -5,7 +5,7 @@ const SearchBar = (props) => {
   //   console.log(props.showPrev);
   return (
     <div>
-      <div className="mt-24">
+      <div className="mt-24 lg:mt-5">
         <div className=" border-gray-300 border-2 w-full flex flex-row items-center rounded-xl ">
           <SearchIcon className="h-6 text-gray-600  pl-2" />
           <input

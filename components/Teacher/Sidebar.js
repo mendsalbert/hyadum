@@ -43,10 +43,10 @@ const Sidebar = () => {
               <p className="text-lg">Home</p>
             </div>
           </Link>
-          <Link href="/admin/school" scroll={false}>
+          <Link href="teacher/school" scroll={false}>
             <div
               className={`${
-                rtr.pathname === "/admin/school"
+                rtr.pathname === "/teacher/school"
                   ? `text-gray-900`
                   : `text-gray-500 `
               } cursor-pointer flex items-center space-x-6`}
