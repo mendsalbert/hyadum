@@ -1,12 +1,13 @@
 import SearchBar from "../SearchBar";
-const AddEvent = () => {
+
+const AddTimeTable = () => {
   return (
-    <div className="w-9/12 p-7">
+    <div className="w-full lg:w-9/12 p-7 ">
       <SearchBar showPrev={true} />
       <div className="w-full ">
         <div>
           <p className="text-gray-600 text-xl font-bold">
-            Add Event (Term plan)
+            Add Time Table (Term plan)
           </p>
           <div>
             <div>
@@ -46,4 +47,4 @@ const AddEvent = () => {
   );
 };
 
-export default AddEvent;
+export default AddTimeTable;

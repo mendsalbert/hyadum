@@ -14,6 +14,7 @@ import {
   BellIcon,
   ChatIcon,
   XIcon,
+  TableIcon,
 } from "@heroicons/react/outline";
 import Link from "next/link";
 import { AcademicCapIcon } from "@heroicons/react/solid";
@@ -53,6 +54,18 @@ const Sidebar = () => {
             >
               <OfficeBuildingIcon className="h-8" />
               <p className="text-lg">School</p>
+            </div>
+          </Link>
+          <Link href="/teacher/timetable">
+            <div
+              className={`${
+                rtr.pathname === "/teacher/timetable"
+                  ? `text-gray-900`
+                  : `text-gray-500 `
+              } cursor-pointer flex items-center space-x-6`}
+            >
+              <TableIcon className="h-8" />
+              <p className="text-lg">TimeTable</p>
             </div>
           </Link>
           {/* <Link href="/admin/admission" scroll={false}>
@@ -210,7 +223,7 @@ const Sidebar = () => {
       </div>
       {/* mobile nav */}
       {toggle ? (
-        <div className="bg-white w-full h-screen z-30">
+        <div className="bg-white w-full h-screen fixed z-50">
           <div
             onClick={() => {
               setToggle(false);
@@ -221,7 +234,7 @@ const Sidebar = () => {
           </div>
           <div className="mt-3 space-y-4 p-5 flex flex-col justify-center items-start">
             <p className="text-lg font-bold text-blue-600">Menu</p>
-            <Link href="/teacher" scroll={false}>
+            <Link href="/teacher">
               <div
                 onClick={() => {
                   setToggle(false);
@@ -236,10 +249,10 @@ const Sidebar = () => {
                 <p className="text-xl">Home</p>
               </div>
             </Link>
-            <Link href="/admin/school" scroll={false}>
+            <Link href="/teacher/school">
               <div
                 className={`${
-                  rtr.pathname === "/admin/school"
+                  rtr.pathname === "/teacher/school"
                     ? `text-gray-900`
                     : `text-gray-500 `
                 } cursor-pointer flex items-center space-x-6`}
@@ -248,13 +261,25 @@ const Sidebar = () => {
                 <p className="text-xl">School</p>
               </div>
             </Link>
+            <Link href="/teacher/timetable">
+              <div
+                className={`${
+                  rtr.pathname === "/teacher/timetable"
+                    ? `text-gray-900`
+                    : `text-gray-500 `
+                } cursor-pointer flex items-center space-x-6`}
+              >
+                <TableIcon className="h-10" />
+                <p className="text-xl">Time Table</p>
+              </div>
+            </Link>
           </div>
         </div>
       ) : (
         ""
       )}
 
-      <div className="bg-white lg:hidden fixed w-full px-2 flex flex-row justify-between items-center h-20  shadow-xl">
+      <div className="bg-white lg:hidden fixed w-full px-5 flex flex-row justify-between items-center h-20  shadow-xl">
         <div
           className="cursor-pointer"
           onClick={() => {
