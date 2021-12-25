@@ -56,7 +56,7 @@ const Sidebar = () => {
               <p className="text-lg">School</p>
             </div>
           </Link>
-          <Link href="/teacher/timetable">
+          <Link href="/teacher/timetable" scroll={false}>
             <div
               className={`${
                 rtr.pathname === "/teacher/timetable"
@@ -68,6 +68,59 @@ const Sidebar = () => {
               <p className="text-lg">TimeTable</p>
             </div>
           </Link>
+          <div>
+            <Link href="/teacher/grade" scroll={false}>
+              <div
+                className={`${
+                  patternMatch.match(/grade/g)
+                    ? `text-gray-900`
+                    : `text-gray-500 `
+                } cursor-pointer flex items-center space-x-6 text-lg`}
+              >
+                <CheckCircleIcon className="h-8" />
+                <p className="text-lg">Grade</p>
+              </div>
+            </Link>
+            {patternMatch.match(/grade/g) ? (
+              <div className="ml-16 pt-2 space-y-2">
+                <Link href="/teacher/grade/assesment" scroll={false}>
+                  <p
+                    className={`text-lg text-gray-500 ${
+                      rtr.pathname === "/teacher/grade/assesment"
+                        ? "text-gray-900"
+                        : ""
+                    }  cursor-pointer`}
+                  >
+                    Assesment
+                  </p>
+                </Link>
+                <Link href="/teacher/grade/grades" scroll={false}>
+                  <p
+                    className={`text-lg text-gray-500 ${
+                      rtr.pathname === "/teacher/grade/grades"
+                        ? "text-gray-900"
+                        : ""
+                    }  cursor-pointer`}
+                  >
+                    Final Grades
+                  </p>
+                </Link>
+                <Link href="/teacher/grade/report" scroll={false}>
+                  <p
+                    className={`text-lg text-gray-500 ${
+                      rtr.pathname === "/teacher/grade/report"
+                        ? "text-gray-900"
+                        : ""
+                    }  cursor-pointer`}
+                  >
+                    Report
+                  </p>
+                </Link>
+              </div>
+            ) : (
+              ""
+            )}
+          </div>
           {/* <Link href="/admin/admission" scroll={false}>
           <div
             className={`${
@@ -273,6 +326,20 @@ const Sidebar = () => {
                 <p className="text-xl">Time Table</p>
               </div>
             </Link>
+            <div>
+              <Link href="/teacher/grade" scroll={false}>
+                <div
+                  className={`${
+                    patternMatch.match(/grade/g)
+                      ? `text-gray-900`
+                      : `text-gray-500 `
+                  } cursor-pointer flex items-center space-x-6 text-lg`}
+                >
+                  <CheckCircleIcon className="h-10" />
+                  <p className="text-lg">Grade</p>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       ) : (
