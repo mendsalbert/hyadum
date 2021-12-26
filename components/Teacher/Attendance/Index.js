@@ -3,6 +3,7 @@ import SearchBar from "../SearchBar";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
+  PresentationChartBarIcon,
   UserAddIcon,
 } from "@heroicons/react/outline";
 import Link from "next/link";
@@ -113,12 +114,6 @@ const Home = (props) => {
                         scope="col"
                         className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                       >
-                        Image
-                      </th>
-                      <th
-                        scope="col"
-                        className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                      >
                         Name
                       </th>
                       <th
@@ -139,21 +134,24 @@ const Home = (props) => {
                       >
                         Age
                       </th>
+                      <th></th>
+                      <th></th>
+                      <th
+                        scope="col"
+                        className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      >
+                        Attendance chart
+                      </th>
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
                     {products.map((product) => (
                       <tr key={product.id}>
-                        <td className="px-4 py-4 whitespace-nowrap">
-                          <Link href="student/single_student">
-                            <div className=" mr-2 rounded-lg w-32 ">
-                              <div className="bg-user-icon w-16 h-16 rounded-full bg-cover bg-center"></div>
-                            </div>
-                          </Link>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          {product.name}
-                        </td>
+                        <Link href="student/single_student">
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                            {product.name}
+                          </td>
+                        </Link>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           {product.class}
                         </td>
@@ -162,6 +160,15 @@ const Home = (props) => {
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           {product.age}
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                          <input type="radio" />
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                          <input type="radio" />
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                          <PresentationChartBarIcon className="h-8" />
                         </td>
                       </tr>
                     ))}

@@ -161,15 +161,21 @@ const Index = (props) => {
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           <div className="space-y-2">
-                            <div className="bg-blue-600 px-4 py-1 text-white text-center rounded-md cursor-pointer">
-                              Assesment
-                            </div>
-                            <div className="bg-purple-600 px-4 py-1 text-white text-center rounded-md cursor-pointer">
-                              Final Grade
-                            </div>
-                            <div className="bg-green-600 px-4 py-1 text-white text-center rounded-md cursor-pointer">
-                              Generate report
-                            </div>
+                            <Link href="grade/assesment">
+                              <div className="bg-blue-600 px-4 py-1 text-white text-center rounded-md cursor-pointer">
+                                Assesment
+                              </div>
+                            </Link>
+                            <Link href="grade/grades">
+                              <div className="bg-purple-600 px-4 py-1 text-white text-center rounded-md cursor-pointer">
+                                Final Grade
+                              </div>
+                            </Link>
+                            <Link href="grade/report">
+                              <div className="bg-green-600 px-4 py-1 text-white text-center rounded-md cursor-pointer">
+                                Generate report
+                              </div>
+                            </Link>
                           </div>
                         </td>
                       </tr>

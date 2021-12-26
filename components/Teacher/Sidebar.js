@@ -248,19 +248,6 @@ const Sidebar = () => {
                 <p className="text-lg">Attendance</p>
               </div>
             </Link>
-            <Link href="/teacher/salary" scroll={false}>
-              <div
-                className={`${
-                  rtr.pathname === "/teacher/salary"
-                    ? `text-gray-900`
-                    : `text-gray-500 `
-                } cursor-pointer flex items-center space-x-6`}
-              >
-                <CashIcon className="h-10" />
-                <p className="text-lg">Salary</p>
-              </div>
-            </Link>
-
             <Link href="/teacher/resources" scroll={false}>
               <div
                 className={`${
