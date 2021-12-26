@@ -91,48 +91,9 @@ const Sidebar = () => {
                 } cursor-pointer flex items-center space-x-6 text-lg`}
               >
                 <CheckCircleIcon className="h-8" />
-                <p className="text-lg">**Grade</p>
+                <p className="text-lg">Grade</p>
               </div>
             </Link>
-            {patternMatch.match(/grade/g) ? (
-              <div className="ml-16 pt-2 space-y-2">
-                <Link href="/teacher/grade/assesment" scroll={false}>
-                  <p
-                    className={`text-lg text-gray-500 ${
-                      rtr.pathname === "/teacher/grade/assesment"
-                        ? "text-gray-900"
-                        : ""
-                    }  cursor-pointer`}
-                  >
-                    Assesment
-                  </p>
-                </Link>
-                <Link href="/teacher/grade/grades" scroll={false}>
-                  <p
-                    className={`text-lg text-gray-500 ${
-                      rtr.pathname === "/teacher/grade/grades"
-                        ? "text-gray-900"
-                        : ""
-                    }  cursor-pointer`}
-                  >
-                    Final Grades
-                  </p>
-                </Link>
-                <Link href="/teacher/grade/report" scroll={false}>
-                  <p
-                    className={`text-lg text-gray-500 ${
-                      rtr.pathname === "/teacher/grade/report"
-                        ? "text-gray-900"
-                        : ""
-                    }  cursor-pointer`}
-                  >
-                    Report
-                  </p>
-                </Link>
-              </div>
-            ) : (
-              ""
-            )}
           </div>
           <Link href="/teacher/assignment" scroll={false}>
             <div
