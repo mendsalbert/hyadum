@@ -10,14 +10,14 @@ const Index = () => {
           <p className="text-blue-600  text-xl lg:text-2xl font-bold pb-3 pt-5">
             School Information
           </p>
-          {/* <Link href="school/add_timetable" scroll={false}>
+          <Link href="school/add_timetable" scroll={false}>
             <div className="flex flex-row items-center lg:space-x-2 space-x-1 ">
               <UserAddIcon className="h-7 cursor-pointer text-gray-500" />
               <p className="text-gray-600 cursor-pointer text-sm lg:text-lg  font-bold py-10">
                 Add Timetable
               </p>
             </div>
-          </Link> */}
+          </Link>
         </div>
         <div>
           <div className="space-y-4 bg-gray-50 shadow-xl p-4 rounded-lg">
