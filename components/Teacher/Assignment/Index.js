@@ -2,7 +2,7 @@ import SearchBar from "../SearchBar";
 
 const AddAssignment = () => {
   return (
-    <div className="w-full lg:w-9/12 p-7 ">
+    <div className="w-full lg:w-9/12 lg:p-7 p-4  ">
       <SearchBar showPrev={true} />
       <div className="w-full ">
         <div>

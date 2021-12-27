@@ -1,9 +1,9 @@
 import Layout from "../../../components/Teacher/Layout";
-
+import AssesmentPage from "../../../components/Teacher/Assesment/Index";
 const Assesment = () => {
   return (
     <Layout>
-      <p>Assesment</p>
+      <AssesmentPage />
     </Layout>
   );
 };
