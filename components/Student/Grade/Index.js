@@ -1,24 +1,19 @@
 import React, { useState, useEffect } from "react";
 import SearchBar from "../SearchBar";
 import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  UserAddIcon,
+  CakeIcon,
+  CalendarIcon,
+  CashIcon,
+  FlagIcon,
+  IdentificationIcon,
+  InboxIcon,
+  LocationMarkerIcon,
+  LogoutIcon,
+  MailIcon,
+  PhoneIcon,
 } from "@heroicons/react/outline";
 import Link from "next/link";
 const Index = (props) => {
-  const [activePag, setActivePag] = useState(0);
-  const [modal, setModal] = useState(false);
-  const products = [
-    {
-      id: "1",
-      name: "Mends Albert",
-      class: "5",
-      salary: "80.00",
-      age: "22",
-    },
-  ];
-
   return (
     <div className="w-full lg:w-9/12 lg:p-7 p-4">
       <SearchBar showPrev={true} />
@@ -29,88 +24,84 @@ const Index = (props) => {
         </p>
       </div>
 
-      <div>
-        <div className="flex flex-col">
-          <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-              <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                <table className="min-w-full divide-y divide-gray-200">
-                  <thead className="bg-gray-50">
-                    <tr>
-                      <th
-                        scope="col"
-                        className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                      >
-                        Image
-                      </th>
-                      <th
-                        scope="col"
-                        className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                      >
-                        Name
-                      </th>
-                      <th
-                        scope="col"
-                        className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                      >
-                        Class
-                      </th>
-                      <th
-                        scope="col"
-                        className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                      >
-                        Salary
-                      </th>
-                      <th
-                        scope="col"
-                        className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                      >
-                        Age
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="bg-white divide-y divide-gray-200">
-                    {products.map((product) => (
-                      <tr key={product.id}>
-                        <td className="px-4 py-4 whitespace-nowrap">
-                          <Link href="grade/single_student">
-                            <div className=" mr-2 rounded-lg w-32 ">
-                              <div className="bg-user-icon w-16 h-16 rounded-full bg-cover bg-center"></div>
-                            </div>
-                          </Link>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          {product.name}
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          {product.class}
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          {product.salary}
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          {product.age}
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          <div className="space-y-2">
-                            <Link href="grade/assesment">
-                              <div className="bg-blue-600 px-4 py-1 text-white text-center rounded-md cursor-pointer">
-                                Assesment
-                              </div>
-                            </Link>
+      <div className="space-y-2 pb-3">
+        <Link href="grade/assesment">
+          <div className="bg-blue-600 px-4 py-1 text-white text-center rounded-md cursor-pointer">
+            Assesment
+          </div>
+        </Link>
 
-                            <Link href="grade/report">
-                              <div className="bg-green-600 px-4 py-1 text-white text-center rounded-md cursor-pointer">
-                                Report
-                              </div>
-                            </Link>
-                          </div>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+        <Link href="grade/report">
+          <div className="bg-green-600 px-4 py-1 text-white text-center rounded-md cursor-pointer">
+            Report
+          </div>
+        </Link>
+      </div>
+      <div className="border-2 p-4 rounded-lg">
+        <div className="py-5">
+          <div className="flex flex-col lg:flex-row lg:space-x-16 space-x-0">
+            <div className="space-y-3">
+              <div>
+                <div className="bg-user-icon w-48 h-48 rounded-full bg-cover bg-center"></div>
               </div>
+              <p className="text-xl font-bold text-gray-600">Mends Albert</p>
+              <div className="p-2 w-full bg-blue-600 font-Montserrat text-white text-center rounded-lg cursor-pointer">
+                Print Testimonial
+              </div>
+              <div className="text-gray-500 cursor-pointer flex items-center space-x-2">
+                <CalendarIcon className="h-6" />
+                <p className="text-sm">2 Yo</p>
+              </div>
+              <div className="text-gray-500 cursor-pointer flex items-center space-x-2">
+                <InboxIcon className="h-6" />
+                <p className="text-sm">Kindergarten 1</p>
+              </div>
+              <div className="text-gray-500 cursor-pointer flex items-center space-x-2">
+                <PhoneIcon className="h-6" />
+                <p className="text-sm">Gurdians Tel: 0249107812 1</p>
+              </div>
+            </div>
+            <div>
+              <p className="text-lg mb-1 font-bold lg:mt-0 mt-4 text-gray-600">
+                About
+              </p>
+              <p className="text-gray-500">
+                Mends Albert is a student of Divine Montesorre School. In class
+                Six(6). He comes from Sampa in the Jarman North District Bono
+                Region. Daniel Adu Sarkodie is the name of his class teacher. Mr
+                an Mrs.Mends are his parents.
+              </p>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-9">
+                <div>
+                  <IdentificationIcon className="h-6" />
+                  <p className="text-sm font-bold">Guradians Names:</p>
+                  <p className="text-sm font-bold">Father: Joseph Mensah</p>
+                  <p className="text-sm font-bold">Mother: Obidiaba Martha</p>
+                </div>
+                <div>
+                  <PhoneIcon className="h-6" />
+                  <p className="text-sm font-bold">Guradians Contact:</p>
+                  <p className="text-sm font-bold">Father: 0249107812</p>
+                  <p className="text-sm font-bold">Mother: 0540913634</p>
+                </div>
+                <div className="bg-gray-200 p-2 rounded-lg text-gray-500  flex items-center space-x-2">
+                  <CakeIcon className="h-6" />
+                  <p className="text-sm font-bold">21st May, 1999</p>
+                </div>
+                <div className="bg-gray-200 p-2 rounded-lg text-gray-500  flex items-center space-x-2">
+                  <FlagIcon className="h-6" />
+                  <p className="text-sm font-bold">Joined 26th October</p>
+                </div>
+                <div className="bg-blue-600 p-2 rounded-lg text-white  flex items-center space-x-2">
+                  <LogoutIcon className="h-6" />
+                  <p className="text-sm font-bold">Performance - Average</p>
+                </div>
+                <div className="bg-red-600 p-2 rounded-lg text-white  flex items-center space-x-2">
+                  <CashIcon className="h-6" />
+                  <p className="text-sm font-bold">Fees: (-Ghc 500.00)</p>
+                </div>
+              </div>
+              {/* <p className="text-2xl font-bold">Mends Albert</p> */}
             </div>
           </div>
         </div>

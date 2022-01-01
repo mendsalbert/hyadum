@@ -32,6 +32,15 @@ const Home = () => {
           <p className=" text-purple-900 text-2xl font-bold">7</p>
           <p className="text-purple-900 ">Courses Available</p>
         </div>
+        <div className="bg-green-100 rounded-xl p-3">
+          <div className="flex justify-between items-center  text-green-900">
+            <CashIcon className="h-10" />
+          </div>
+          <p className=" text-green-900 text-2xl font-bold">Fees</p>
+          <p className="text-green-900 ">
+            You have paid your fees for this term
+          </p>
+        </div>
       </div>
       {/* semester activities */}
       <div>
