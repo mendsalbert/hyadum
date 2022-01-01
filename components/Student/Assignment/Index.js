@@ -6,36 +6,35 @@ const AddAssignment = () => {
       <SearchBar showPrev={true} />
       <div className="w-full ">
         <div>
-          <p className="text-gray-600 text-xl font-bold">Send An Assignment</p>
-          <div>
-            <div>
-              {/* <span>Term(Semester):</span> */}
-              <div className="border-gray-300 border-2 mb-5 mt-3 w-full flex flex-row items-center rounded-xl ">
-                <select className="rounded-lg p-2 w-full bg-transparent font-Montserrat  focus:outline-none">
-                  <option>1st Term </option>
-                  <option>2nd Term </option>
-                  <option>3rd Term </option>
-                </select>
+          <p className="text-gray-600 text-xl font-bold pb-2">
+            Assignment Available
+          </p>
+          <div className="w-full space-y-2">
+            <div className="bg-gray-100 rounded-lg p-4 shadow-md">
+              <p className="text-gray-700 text-lg py-2">Submit assignment</p>
+              <hr className="" />
+              <div>
+                <p className="pb-2">Due date: 21st May,2020</p>
               </div>
+              <div className="grid lg:grid-cols-3 grid-cols-1 gap-2 ">
+                <div>
+                  <select className="rounded-lg p-2 w-full  font-Montserrat  focus:outline-none">
+                    <option>English</option>
+                    <option>Math</option>
+                    <option>Science</option>
+                    <option>RME </option>
+                  </select>
+                </div>
 
-              <div className="border-gray-300 border-2 mb-5 mt-3 w-full flex flex-row items-center rounded-xl ">
-                <input
-                  type="date"
-                  placeholder="Salary"
-                  className=" rounded-lg p-2 w-full bg-transparent font-Montserrat  focus:outline-none"
-                />
-              </div>
-
-              <div className="border-gray-300 border-2 mb-5 mt-3 w-full flex flex-row items-center rounded-xl ">
-                <textarea
-                  rows={4}
-                  placeholder="Enter Event(Activity)"
-                  className=" rounded-lg p-2 w-full bg-transparent font-Montserrat  focus:outline-none"
-                ></textarea>
-              </div>
-
-              <div className="bg-gray-900 my-5 w-full flex flex-row items-center rounded-xl justify-center cursor-pointer ">
-                <p className="text-center p-2 text-white">Add</p>
+                <div>
+                  <input type="date" className="p-2 rounded-md w-full" />
+                </div>
+                <div className="rounded-lg p-2 w-full  font-Montserrat  focus:outline-none">
+                  <input type="file" />
+                </div>
+                <div className="bg-blue-600 text-center p-2 rounded-lg w-full text-white cursor-pointer">
+                  SUBMIT
+                </div>
               </div>
             </div>
           </div>
