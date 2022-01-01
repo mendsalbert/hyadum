@@ -32,9 +32,12 @@ const AddAssignment = () => {
                 <div className="rounded-lg p-2 w-full  font-Montserrat  focus:outline-none">
                   <input type="file" />
                 </div>
-                <div className="bg-blue-600 text-center p-2 rounded-lg w-full text-white cursor-pointer">
-                  SUBMIT
-                </div>
+              </div>
+              <p className="w-full py-3">
+                Question: what is the difference between adjective and a noun
+              </p>
+              <div className="bg-blue-600 text-center p-2 rounded-lg w-full text-white cursor-pointer">
+                SUBMIT
               </div>
             </div>
           </div>

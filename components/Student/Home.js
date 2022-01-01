@@ -5,8 +5,9 @@ import {
   MinusCircleIcon,
   UserGroupIcon,
 } from "@heroicons/react/outline";
+import { PencilAltIcon } from "@heroicons/react/solid";
 import SearchBar from "./SearchBar";
-
+import Link from "next/link";
 const Home = () => {
   return (
     <div className="lg:w-9/12 lg:p-7 w-full p-4 ">
@@ -18,6 +19,15 @@ const Home = () => {
         Last login : 4:00PM 3rd December, 2021
       </p>
       <div className="grid lg:grid-cols-2 lg:gap-5 grid-cols-1 gap-4 mb-6 ">
+        <Link href="/student/assignment">
+          <div className="bg-red-100 rounded-xl p-3 cursor-pointer ">
+            <div className="flex justify-between items-center  text-red-900">
+              <PencilAltIcon className="h-10" />
+            </div>
+            <p className=" text-red-900 text-2xl font-bold">4</p>
+            <p className="text-red-900 ">Assignment to sumbit</p>
+          </div>
+        </Link>
         <div className="bg-gray-100 rounded-xl p-3 ">
           <div className="flex justify-between items-center  text-gray-900">
             <UserGroupIcon className="h-10" />
