@@ -1,11 +1,25 @@
-import { BellIcon, ChatIcon } from "@heroicons/react/outline";
-
+import { BellIcon, MailIcon } from "@heroicons/react/outline";
+import Link from "next/link";
 const SideRight = () => {
   return (
     <div className="w-full p-4 hidden lg:block lg:w-3/12 bg-gray-50 lg:p-7">
       <div className="flex flex-row items-center justify-end space-x-7 text-gray-500">
-        <BellIcon className="h-7" />
-        <ChatIcon className="h-7" />
+        <Link href="/teacher/notification">
+          <div className="relative cursor-pointer">
+            <BellIcon className="h-7" />
+            <span className="absolute -top-2 -right-1 text-xs text-center flex justify-center items-center bg-red-500 text-white rounded-full w-5 h-5">
+              25
+            </span>
+          </div>
+        </Link>
+        <Link href="/teacher/message">
+          <div className="relative  cursor-pointer">
+            <MailIcon className="h-7" />
+            <span className="absolute -top-2 -right-1 text-xs text-center flex justify-center items-center bg-red-500 text-white rounded-full w-5 h-5">
+              5
+            </span>
+          </div>
+        </Link>
         <div className="bg-user-icon w-9 h-9 rounded-full bg-cover bg-center"></div>
       </div>
 

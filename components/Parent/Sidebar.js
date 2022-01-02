@@ -220,12 +220,14 @@ const Sidebar = () => {
           <MenuAlt1Icon className="h-9" />
         </div>
         <div className="flex flex-row items-center justify-end space-x-7 text-gray-500">
-          <div className=" relative cursor-pointer">
-            <BellIcon className="h-7" />
-            <span className="absolute -top-2 -right-1 text-xs text-center flex justify-center items-center bg-red-500 text-white rounded-full w-5 h-5">
-              25
-            </span>
-          </div>
+          <Link href="/parent/notification">
+            <div className=" relative cursor-pointer">
+              <BellIcon className="h-7" />
+              <span className="absolute -top-2 -right-1 text-xs text-center flex justify-center items-center bg-red-500 text-white rounded-full w-5 h-5">
+                25
+              </span>
+            </div>
+          </Link>
           <Link href="/parent/message">
             <div className="relative cursor-pointer">
               <MailIcon className="h-7" />

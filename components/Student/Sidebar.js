@@ -1,21 +1,15 @@
 import react, { useState } from "react";
 import {
-  CalculatorIcon,
-  CashIcon,
   CheckCircleIcon,
   BookOpenIcon,
   GlobeIcon,
   HomeIcon,
   OfficeBuildingIcon,
-  UserAddIcon,
-  UserGroupIcon,
-  UsersIcon,
   MenuAlt1Icon,
   BellIcon,
-  ChatIcon,
   XIcon,
   TableIcon,
-  ClockIcon,
+  MailIcon,
 } from "@heroicons/react/outline";
 import Link from "next/link";
 import { AcademicCapIcon } from "@heroicons/react/solid";
@@ -276,8 +270,22 @@ const Sidebar = () => {
           <MenuAlt1Icon className="h-9" />
         </div>
         <div className="flex flex-row items-center justify-end space-x-7 text-gray-500">
-          <BellIcon className="h-7" />
-          <ChatIcon className="h-7" />
+          <Link href="/student/notification">
+            <div className="relative cursor-pointer">
+              <BellIcon className="h-7" />
+              <span className="absolute -top-2 -right-1 text-xs text-center flex justify-center items-center bg-red-500 text-white rounded-full w-5 h-5">
+                25
+              </span>
+            </div>
+          </Link>
+          <Link href="/student/message">
+            <div className="relative  cursor-pointer">
+              <MailIcon className="h-7" />
+              <span className="absolute -top-2 -right-1 text-xs text-center flex justify-center items-center bg-red-500 text-white rounded-full w-5 h-5">
+                5
+              </span>
+            </div>
+          </Link>
           <div className="bg-user-icon w-9 h-9 rounded-full bg-cover bg-center"></div>
         </div>
       </div>

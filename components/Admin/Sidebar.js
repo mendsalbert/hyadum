@@ -98,53 +98,6 @@ const Sidebar = () => {
             <p className="text-lg">Students</p>
           </div>
         </Link>
-
-        {/* <div>
-          <Link href="/admin/attendance" scroll={false}>
-            <div
-              className={`${
-                patternMatch.match(/attendance/g)
-                  ? `text-gray-900`
-                  : `text-gray-500 `
-              } cursor-pointer flex items-center space-x-6 text-lg`}
-            >
-              <ClockIcon className="h-8" />
-              <p>Attendance</p>
-            </div>
-          </Link>
-
-          {patternMatch.match(/attendance/g) ? (
-            <div className="ml-16 pt-2 space-y-2">
-              <Link href="/admin/attendance/income" scroll={false}>
-                <p
-                  className={`text-lg text-gray-500 ${
-                    rtr.pathname === "/admin/attendance/income"
-                      ? "text-gray-900"
-                      : ""
-                  }  cursor-pointer`}
-                >
-                  Income
-                </p>
-              </Link>
-              <p className="text-lg text-gray-500 cursor-pointer">Expenses</p>
-              <p className="text-lg text-gray-500 cursor-pointer">Salaries</p>
-              <p className="text-lg text-gray-500 cursor-pointer">
-                Staff Payments
-              </p>
-              <p className="text-lg text-gray-500 cursor-pointer">
-                Transactions
-              </p>
-              <p className="text-lg text-gray-500 cursor-pointer">
-                Staff Balance
-              </p>
-              <p className="text-lg text-gray-500 cursor-pointer">
-                Print Statement
-              </p>
-            </div>
-          ) : (
-            ""
-          )}
-        </div> */}
         <div>
           <Link href="/admin/accounting" scroll={false}>
             <div
@@ -193,17 +146,7 @@ const Sidebar = () => {
                   Salaries
                 </p>
               </Link>
-              {/* <Link href="/admin/accounting/staff_payment">
-                <p
-                  className={`text-lg text-gray-500 ${
-                    rtr.pathname === "/admin/accounting/staff_payment"
-                      ? "text-gray-900"
-                      : ""
-                  }  cursor-pointer`}
-                >
-                  Staff Payments
-                </p>
-              </Link> */}
+
               <Link href="/admin/accounting/transaction" scroll={false}>
                 <p
                   className={`text-lg text-gray-500 ${
@@ -245,23 +188,6 @@ const Sidebar = () => {
               <p className="text-lg">Student Fees</p>
             </div>
           </Link>
-          {/* {patternMatch.match(/fees/g) ? (
-            <div className="ml-16 pt-2 space-y-2">
-              <Link href="/admin/fees/payment" scroll={false}>
-                <p
-                  className={`${
-                    patternMatch.match(/payment/g)
-                      ? `text-gray-900`
-                      : `text-gray-500 `
-                  } cursor-pointer flex items-center space-x-6 text-lg`}
-                >
-                  Payment
-                </p>
-              </Link>
-            </div>
-          ) : (
-            ""
-          )} */}
         </div>
         <Link href="/admin/resources" scroll={false}>
           <div
