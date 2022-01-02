@@ -1,5 +1,5 @@
 import SearchBar from "../SearchBar";
-const AddAssignment = () => {
+const Assignment = () => {
   return (
     <div className="lg:w-9/12 lg:p-7 w-full p-4">
       <SearchBar showPrev={true} />
@@ -38,4 +38,4 @@ const AddAssignment = () => {
   );
 };
 
-export default AddAssignment;
+export default Assignment;

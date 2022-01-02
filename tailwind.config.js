@@ -16,6 +16,7 @@ module.exports = {
         "header-backgroundImage": "url('/images/headerBackground.jpg')",
         "school-app": "url('/images/school.jpg')",
         "user-icon": "url('/images/user.jpg')",
+        "login-image": "url('/images/login.jpg')",
       },
     },
   },
